@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:nether_star",
+    "necessariesmod:dubious_food",
+    "necessariesmod:dirt_soup",
+    "necessariesmod:gravel_soup"
+  ],
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:the_thing"
+  }
+}

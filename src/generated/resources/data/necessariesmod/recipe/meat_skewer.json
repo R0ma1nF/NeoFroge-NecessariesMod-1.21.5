@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": "#necessariesmod:meats",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "MMM",
+    " S "
+  ],
+  "result": {
+    "count": 3,
+    "id": "necessariesmod:meat_skewer"
+  }
+}

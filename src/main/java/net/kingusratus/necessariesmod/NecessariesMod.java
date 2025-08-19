@@ -1,7 +1,10 @@
 package net.kingusratus.necessariesmod;
 
 import net.kingusratus.necessariesmod.block.ModBlocks;
+import net.kingusratus.necessariesmod.effect.ModEffects;
 import net.kingusratus.necessariesmod.item.ModItems;
+import net.kingusratus.necessariesmod.loot.ModLootModifiers;
+import net.kingusratus.necessariesmod.utils.ModCreativeModeTabs;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
@@ -37,6 +40,9 @@ public class NecessariesMod {
         // Register the items in the DeferredRegister
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEffects.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -50,17 +56,6 @@ public class NecessariesMod {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.STEEL_INGOT);
-            event.accept(ModItems.RUBY);
-        }
-
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.STEEL_BLOCK);
-            event.accept(ModBlocks.RUBY_ORE);
-            event.accept(ModBlocks.DEEPSLATE_RUBY_ORE);
-            event.accept(ModBlocks.RUBY_BLOCK);
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

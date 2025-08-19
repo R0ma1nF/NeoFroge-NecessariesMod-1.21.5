@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:dragon_breath",
+    "minecraft:chorus_fruit",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:ender_soup"
+  }
+}

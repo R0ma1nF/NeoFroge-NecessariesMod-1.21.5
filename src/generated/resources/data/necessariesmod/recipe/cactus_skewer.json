@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "minecraft:cactus",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "CCC",
+    " S "
+  ],
+  "result": {
+    "count": 3,
+    "id": "necessariesmod:cactus_skewer"
+  }
+}

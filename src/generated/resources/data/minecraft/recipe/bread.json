@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "necessariesmod:compressed_bread"
+  ],
+  "result": {
+    "count": 9,
+    "id": "minecraft:bread"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "necessariesmod:dubious_food",
+    "minecraft:wheat",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "count": 4,
+    "id": "necessariesmod:random_cookie"
+  }
+}

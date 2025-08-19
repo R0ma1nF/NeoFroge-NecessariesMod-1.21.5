@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "minecraft:bread",
+    "C": "necessariesmod:cheese",
+    "M": "#necessariesmod:meats"
+  },
+  "pattern": [
+    " B ",
+    "CMC",
+    " B "
+  ],
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:hamburger"
+  }
+}

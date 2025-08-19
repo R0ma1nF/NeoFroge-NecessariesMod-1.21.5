@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:lava_bucket",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:lava_soup"
+  }
+}

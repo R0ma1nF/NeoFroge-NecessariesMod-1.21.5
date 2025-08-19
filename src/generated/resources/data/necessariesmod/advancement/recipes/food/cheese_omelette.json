@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cheese": {
+      "conditions": {
+        "items": [
+          {
+            "items": "necessariesmod:cheese"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_omelette": {
+      "conditions": {
+        "items": [
+          {
+            "items": "necessariesmod:omelette"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "necessariesmod:cheese_omelette"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cheese",
+      "has_omelette"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "necessariesmod:cheese_omelette"
+    ]
+  }
+}

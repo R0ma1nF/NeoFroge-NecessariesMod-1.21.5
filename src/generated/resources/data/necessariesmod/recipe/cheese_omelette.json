@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "necessariesmod:cheese",
+    "necessariesmod:omelette"
+  ],
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:cheese_omelette"
+  }
+}

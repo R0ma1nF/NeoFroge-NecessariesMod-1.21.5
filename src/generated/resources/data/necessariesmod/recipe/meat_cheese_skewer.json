@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "necessariesmod:cheese",
+    "M": "#necessariesmod:meats",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "MCM",
+    " S "
+  ],
+  "result": {
+    "count": 3,
+    "id": "necessariesmod:meat_cheese_skewer"
+  }
+}

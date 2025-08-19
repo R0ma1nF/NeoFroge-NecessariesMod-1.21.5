@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": "#minecraft:eggs",
+    "H": "minecraft:honey_bottle",
+    "M": "minecraft:milk_bucket",
+    "S": "minecraft:sugar",
+    "W": "minecraft:wheat"
+  },
+  "pattern": [
+    "SHS",
+    "WWW",
+    "EME"
+  ],
+  "result": {
+    "count": 3,
+    "id": "necessariesmod:pancake"
+  }
+}

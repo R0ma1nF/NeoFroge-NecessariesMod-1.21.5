@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "necessariesmod:orange",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "count": 2,
+    "id": "necessariesmod:orange_jam"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "group": "zombie_jerky",
+  "ingredient": "minecraft:rotten_flesh",
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:zombie_jerky"
+  }
+}

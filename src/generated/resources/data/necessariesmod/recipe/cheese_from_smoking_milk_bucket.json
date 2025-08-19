@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "group": "cheese",
+  "ingredient": "minecraft:milk_bucket",
+  "result": {
+    "count": 8,
+    "id": "necessariesmod:cheese"
+  }
+}

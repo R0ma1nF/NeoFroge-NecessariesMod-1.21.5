@@ -1,0 +1,6 @@
+// 1.21.5	2025-08-20T00:32:12.8137267	Global Loot Modifiers : necessariesmod
+d7b964b9549ca611e146e9945806e4534d22da9d data/necessariesmod/loot_modifiers/banana_to_jungle_leaves.json
+c962ac37289d7810756107b03bd0d5fbc9704ddd data/necessariesmod/loot_modifiers/cherry_to_cherry_leaves.json
+3f38c6be094cad7048081399a0071db7dae5dcbf data/necessariesmod/loot_modifiers/coconut_to_jungle_leaves.json
+221b958c35776e750e51c3c1eefaac4167dd89c9 data/necessariesmod/loot_modifiers/orange_to_oak_leaves.json
+52244e04eaa5a2dada872f3ca000af347ab1ec58 data/neoforge/loot_modifiers/global_loot_modifiers.json

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": "#necessariesmod:fishes",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "FFF",
+    " S "
+  ],
+  "result": {
+    "count": 3,
+    "id": "necessariesmod:fish_skewer"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "necessariesmod:chocolate",
+    "minecraft:milk_bucket"
+  ],
+  "result": {
+    "count": 3,
+    "id": "necessariesmod:hot_chocolate"
+  }
+}

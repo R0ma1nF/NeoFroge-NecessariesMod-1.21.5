@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chocolate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "necessariesmod:chocolate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_milk": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:milk_bucket"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "necessariesmod:hot_chocolate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chocolate",
+      "has_milk"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "necessariesmod:hot_chocolate"
+    ]
+  }
+}

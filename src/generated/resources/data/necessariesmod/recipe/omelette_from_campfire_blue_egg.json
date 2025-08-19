@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "group": "omelette",
+  "ingredient": "minecraft:blue_egg",
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:omelette"
+  }
+}

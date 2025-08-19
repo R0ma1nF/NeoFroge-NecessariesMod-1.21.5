@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "group": "cooked_tropical_fish",
+  "ingredient": "minecraft:tropical_fish",
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:cooked_tropical_fish"
+  }
+}

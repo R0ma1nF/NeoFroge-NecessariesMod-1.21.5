@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.35,
+  "ingredient": "#necessariesmod:trash",
+  "result": {
+    "id": "necessariesmod:dubious_food",
+    "count": 1
+  }
+}

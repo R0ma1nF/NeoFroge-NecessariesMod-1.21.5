@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "group": "smoked_cheese",
+  "ingredient": "necessariesmod:cheese",
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:smoked_cheese"
+  }
+}
