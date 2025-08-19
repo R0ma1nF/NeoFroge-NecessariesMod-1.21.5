@@ -1,0 +1,9 @@
+{
+  "item.necessariesmod.steel_ingot": "Steel Ingot",
+  "item.necessariesmod.ruby": "Ruby",
+
+  "block.necessariesmod.steel_block": "Steel Block",
+  "block.necessariesmod.ruby_ore": "Ruby Ore",
+  "block.necessariesmod.deepslate_ruby_ore": "Deepslate Ruby Ore",
+  "block.necessariesmod.ruby_block": "Ruby Block"
+}

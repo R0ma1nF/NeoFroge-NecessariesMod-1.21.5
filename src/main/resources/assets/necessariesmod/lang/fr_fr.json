@@ -1,0 +1,10 @@
+{
+  "item.necessariesmod.steel_ingot": "Lingot d'acier",
+  "item.necessariesmod.ruby": "Rubis",
+
+  "block.necessariesmod.steel_block": "Bloc d'acier",
+  "block.necessariesmod.ruby_ore": "Minerai de rubis",
+  "block.necessariesmod.deepslate_ruby_ore": "Minerai de rubis en schiste profond",
+  "block.necessariesmod.ruby_block": "Bloc de rubis"
+
+}

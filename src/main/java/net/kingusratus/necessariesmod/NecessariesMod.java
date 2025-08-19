@@ -1,5 +1,8 @@
 package net.kingusratus.necessariesmod;
 
+import net.kingusratus.necessariesmod.block.ModBlocks;
+import net.kingusratus.necessariesmod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -31,6 +34,10 @@ public class NecessariesMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        // Register the items in the DeferredRegister
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -42,9 +49,18 @@ public class NecessariesMod {
 
     }
 
-    // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.STEEL_INGOT);
+            event.accept(ModItems.RUBY);
+        }
 
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.STEEL_BLOCK);
+            event.accept(ModBlocks.RUBY_ORE);
+            event.accept(ModBlocks.DEEPSLATE_RUBY_ORE);
+            event.accept(ModBlocks.RUBY_BLOCK);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
