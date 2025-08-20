@@ -2,7 +2,6 @@
 
 - [A] potion de glowing, potion d'éclair
 - [A] Potion qui inverse les contrôles du joueur
-- [A] Potion de vision négative : inverse les couleurs de l’écran.
 - [A] Potion de confusion : juste met un message dans le chat "vous êtes confus"
 - [A] brochette de mochi avec 3 boules qui donnent des effets différents (plus de 3 boules au total)
 - [A] effet de potion, le joueur peut se manger lui même et prend des dégâts quand il le fait
@@ -15,7 +14,6 @@
 - Poser du lait au sol
 - nouveau biomes plaine ou seul les creeper chargé peuvent spawn
 - enchant kb 10 obtenable ds les table d'enchante
-- beacon en lapis possible / blocks de copper / blocks de redstone / planche de birch
 - armure en obsidienne ( ultra forte + qu la netherite mais tu peux pas bouger avec)
 - steel furnace
 - drill
