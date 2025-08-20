@@ -14,6 +14,19 @@ import java.util.function.Supplier;
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, NecessariesMod.MOD_ID);
 
+
+    public static final Supplier<CreativeModeTab> NECESSARIESMOD_ITEM = CREATIVE_MODE_TAB.register("necessariesmod_item",
+            () -> CreativeModeTab.builder().icon(() -> ModItems.RUBY.get().getDefaultInstance())
+                    .title(Component.translatable("creativetab.necessariesmod.item_tab"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModItems.STEEL_INGOT);
+                        output.accept(ModBlocks.STEEL_BLOCK);
+                        output.accept(ModItems.RUBY);
+                        output.accept(ModBlocks.RUBY_BLOCK);
+                        output.accept(ModBlocks.RUBY_ORE);
+                        output.accept(ModBlocks.DEEPSLATE_RUBY_ORE);
+                    }).build());
+
     public static final Supplier<CreativeModeTab> NECESSARIESMOD_FOODS = CREATIVE_MODE_TAB.register("necessariesmod_foods",
             () -> CreativeModeTab.builder().icon(() -> ModItems.FISH_SKEWER.get().getDefaultInstance())
                     .title(Component.translatable("creativetab.necessariesmod.food_tab"))
@@ -62,18 +75,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.PANCAKE);
                         output.accept(ModItems.THE_THING);
                         output.accept(ModItems.FISH_SWORD);
-                    }).build());
-
-    public static final Supplier<CreativeModeTab> NECESSARIESMOD_ITEM = CREATIVE_MODE_TAB.register("necessariesmod_item",
-            () -> CreativeModeTab.builder().icon(() -> ModItems.RUBY.get().getDefaultInstance())
-                    .title(Component.translatable("creativetab.necessariesmod.item_tab"))
-                    .displayItems((parameters, output) -> {
-                        output.accept(ModItems.STEEL_INGOT);
-                        output.accept(ModBlocks.STEEL_BLOCK);
-                        output.accept(ModItems.RUBY);
-                        output.accept(ModBlocks.RUBY_BLOCK);
-                        output.accept(ModBlocks.RUBY_ORE);
-                        output.accept(ModBlocks.DEEPSLATE_RUBY_ORE);
                     }).build());
 
 

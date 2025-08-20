@@ -34,11 +34,11 @@
   "item.necessariesmod.dirt_soup": "Soupe de terre",
   "item.necessariesmod.gravel_soup": "Soupe de gravier",
   "item.necessariesmod.lava_soup": "Soupe de lave",
-  "item.necessariesmod.ender_soup": "Soupe de l'Ender",
+  "item.necessariesmod.ender_soup": "Soupe de l'End",
   "item.necessariesmod.stone_bread": "Pain de pierre",
-  "item.necessariesmod.ender_cookie": "Cookie de l'Ender",
+  "item.necessariesmod.ender_cookie": "Cookie de l'End",
   "item.necessariesmod.random_cookie": "Cookie aléatoire",
-  "item.necessariesmod.void_cookie": "Cookie du Vide",
+  "item.necessariesmod.void_cookie": "Cookie du Néant",
   "item.necessariesmod.the_thing": "The Thing",
   "item.necessariesmod.apple_pie": "Tarte aux pommes",
   "item.necessariesmod.cherry_pie": "Tarte aux cerises",
@@ -49,13 +49,13 @@
   "item.necessariesmod.pancake": "Pancake",
   "item.necessariesmod.cooked_tropical_fish": "Poisson tropical cuit",
   "item.necessariesmod.netherite_steak": "Steak en Netherite",
-  "item.necessariesmod.zombie_jerky": "Jerky de zombie",
+  "item.necessariesmod.zombie_jerky": "Viande séchée de zombie",
 
   "item.necessariesmod.fish_sword": "Épée de poisson",
 
   "effect.necessariesmod.burning": "Brûlant",
 
   "creativetab.necessariesmod.food_tab": "Necessaries Mod Nourritures",
-  "creativetab.necessariesmod.item_tab": "Necessaries Mod Objets"
+  "creativetab.necessariesmod.item_tab": "Necessaries Mod"
 
 }
