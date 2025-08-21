@@ -1,10 +1,6 @@
 # idées
 
-- [A] potion de glowing, potion d'éclair
-- [A] Potion qui inverse les contrôles du joueur
-- [A] Potion de confusion : juste met un message dans le chat "vous êtes confus"
 - [A] brochette de mochi avec 3 boules qui donnent des effets différents (plus de 3 boules au total)
-- [A] effet de potion, le joueur peut se manger lui même et prend des dégâts quand il le fait
 - [A] nouveau gâteau craftable ( meme recette sauf que les oeufs sont remplacé par des oeufs de dragons)
 
 
@@ -19,6 +15,3 @@
 - drill
 - potato drill
 - upgrade drill
-
-# maybe 
-- effet qui randomise de place les items dand l'inventaire du joueur

@@ -1,22 +1,17 @@
-package net.kingusratus.necessariesmod.effect;
+package net.kingusratus.necessariesmod.effect.consume_effect;
 
-import net.minecraft.advancements.critereon.LightningStrikeTrigger;
+import net.kingusratus.necessariesmod.effect.mob_effect.ModEffects;
 import net.minecraft.core.Holder;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.inventory.ChestMenu;
-import net.minecraft.world.inventory.PlayerEnderChestContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.consume_effects.ConsumeEffect;
 import net.minecraft.world.level.Level;
@@ -35,6 +30,10 @@ public class RandomEffectConsumeEffect implements ConsumeEffect {
     public boolean apply(Level level, ItemStack itemStack, LivingEntity livingEntity) {
 
         if (!level.isClientSide && livingEntity instanceof ServerPlayer player) {
+            List<Holder<MobEffect>> instantEffects = List.of(
+                ModEffects.LIGHTNING
+            );
+
             List<Holder<MobEffect>> effects = List.of(
                 // Effets bénéfiques
                 MobEffects.REGENERATION,
@@ -74,25 +73,23 @@ public class RandomEffectConsumeEffect implements ConsumeEffect {
                 MobEffects.INSTANT_DAMAGE,
                 MobEffects.INSTANT_DAMAGE,
                 MobEffects.INSTANT_DAMAGE,
-                ModEffects.BURNING
+                ModEffects.BURNING,
+                ModEffects.LIGHTNING
             );
             Random random = new Random();
 
-            int totalOptions = effects.size() + 1; // +1 pour la foudre
+            int totalOptions = effects.size();
             int choice = random.nextInt(totalOptions);
 
-            if (choice == effects.size()) {
-                LightningBolt l = EntityType.LIGHTNING_BOLT.create(level, EntitySpawnReason.TRIGGERED);
-                if (l != null) {
-                    l.setPos(player.getX(), player.getY(), player.getZ());
-                    level.addFreshEntity(l);
-                }
-            } else {
-                Holder<MobEffect> randomEffect = effects.get(choice);
-                int duration = 20 * (10 + random.nextInt(11)); // 10 à 20 secondes
-                int amplifier = random.nextInt(2); // niveau 0 ou 1
-                player.addEffect(new MobEffectInstance(randomEffect, duration, amplifier));
+            Holder<MobEffect> randomEffect = effects.get(choice);
+            int duration = 20 * (10 + random.nextInt(11)); // 10 à 20 secondes
+
+            if (instantEffects.contains(randomEffect)) {
+                duration = 1; // effet instantané
             }
+
+            int amplifier = random.nextInt(2); // niveau 0 ou 1
+            player.addEffect(new MobEffectInstance(randomEffect, duration, amplifier));
             level.playSound(null, player.blockPosition(), SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.PLAYERS, 1.0F, 1.0F);
             return true;
         }

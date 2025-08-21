@@ -17,7 +17,6 @@ public class ModItems {
     // The DeferredRegister for items, which will hold all the items we want to register
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(NecessariesMod.MOD_ID);
 
-
     /***************************************************************************************
      * MISC ITEMS
      ***************************************************************************************/
@@ -116,14 +115,11 @@ public class ModItems {
     public static final DeferredItem<Item> NETHERITE_STEAK = ITEMS.registerItem("netherite_steak",
             (properties) -> new Item(properties.rarity(Rarity.RARE).food(ModFoodProperties.NETHERITE_STEAK).component(DataComponents.CONSUMABLE, ModConsumables.NETHERITE_STEAK)));
 
-
     /***************************************************************************************
      * TOOLS
      ***************************************************************************************/
     public static final DeferredItem<Item> FISH_SWORD = ITEMS.registerItem("fish_sword",
             (properties) -> new Item(properties.sword(ToolMaterial.IRON, 3.0F, -2.4F).food(ModFoodProperties.FISH_SWORD).component(DataComponents.CONSUMABLE, ModConsumables.DEFAULT_CONSUMABLE).usingConvertsTo(Items.STICK)));
-
-
 
     public static void register(IEventBus eventBus) {
         // Register the items in the DeferredRegister

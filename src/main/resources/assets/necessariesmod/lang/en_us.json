@@ -46,6 +46,15 @@
   "item.necessariesmod.netherite_steak": "Netherite Steak",
   "item.necessariesmod.zombie_jerky": "Zombie Jerky",
 
+  "item.minecraft.potion.effect.burning": "Potion of Burning",
+  "item.minecraft.splash_potion.effect.burning": "Splash Potion of Burning",
+  "item.minecraft.lingering_potion.effect.burning": "Lingering Potion of Burning",
+  "item.minecraft.potion.effect.glowing": "Potion of Glowing",
+  "item.minecraft.splash_potion.effect.glowing": "Splash Potion of Glowing",
+  "item.minecraft.lingering_potion.effect.glowing": "Lingering Potion of Glowing",
+  "item.minecraft.potion.effect.lightning": "Potion of Lightning",
+  "item.minecraft.splash_potion.effect.lightning": "Splash Potion of Lightning",
+  "item.minecraft.lingering_potion.effect.lightning": "Lingering Potion of Lightning",
 
   "item.necessariesmod.fish_sword": "Fish Sword",
 
@@ -55,6 +64,9 @@
   "block.necessariesmod.ruby_block": "Ruby Block",
 
   "effect.necessariesmod.burning": "Burning",
+  "effect.necessariesmod.lightning": "Lightning",
+  "effect.necessariesmod.confusing": "Confusing",
+  "effect.necessariesmod.confusing.message": "You feel confused!",
 
   "creativetab.necessariesmod.food_tab": "Necessaries Mod Foods",
   "creativetab.necessariesmod.item_tab": "Necessaries Mod"

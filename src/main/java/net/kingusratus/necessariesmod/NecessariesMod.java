@@ -1,9 +1,10 @@
 package net.kingusratus.necessariesmod;
 
 import net.kingusratus.necessariesmod.block.ModBlocks;
-import net.kingusratus.necessariesmod.effect.ModEffects;
+import net.kingusratus.necessariesmod.effect.mob_effect.ModEffects;
 import net.kingusratus.necessariesmod.item.ModItems;
 import net.kingusratus.necessariesmod.loot.ModLootModifiers;
+import net.kingusratus.necessariesmod.potion.ModPotions;
 import net.kingusratus.necessariesmod.utils.ModCreativeModeTabs;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -37,16 +38,21 @@ public class NecessariesMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        // Register the items in the DeferredRegister
+        /*********************************************
+         * REGISTER MOD THINGS
+         *********************************************/
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
         ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
+
         ModLootModifiers.register(modEventBus);
-        ModCreativeModeTabs.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
-
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }

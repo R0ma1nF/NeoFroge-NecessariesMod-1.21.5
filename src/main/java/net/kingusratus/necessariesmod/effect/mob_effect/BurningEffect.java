@@ -1,4 +1,4 @@
-package net.kingusratus.necessariesmod.effect;
+package net.kingusratus.necessariesmod.effect.mob_effect;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;

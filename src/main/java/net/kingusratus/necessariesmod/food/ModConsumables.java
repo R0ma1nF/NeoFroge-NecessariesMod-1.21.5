@@ -1,8 +1,8 @@
 package net.kingusratus.necessariesmod.food;
 
-import net.kingusratus.necessariesmod.effect.EnderChestConsumeEffect;
-import net.kingusratus.necessariesmod.effect.ModEffects;
-import net.kingusratus.necessariesmod.effect.RandomEffectConsumeEffect;
+import net.kingusratus.necessariesmod.effect.consume_effect.EnderChestConsumeEffect;
+import net.kingusratus.necessariesmod.effect.mob_effect.ModEffects;
+import net.kingusratus.necessariesmod.effect.consume_effect.RandomEffectConsumeEffect;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

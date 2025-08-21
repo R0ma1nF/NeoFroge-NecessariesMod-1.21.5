@@ -51,9 +51,22 @@
   "item.necessariesmod.netherite_steak": "Steak en Netherite",
   "item.necessariesmod.zombie_jerky": "Viande séchée de zombie",
 
+  "item.minecraft.potion.effect.burning": "Potion de brûlant",
+  "item.minecraft.splash_potion.effect.burning": "Potion de brûlant jetable",
+  "item.minecraft.lingering_potion.effect.burning": "Potion de brûlant persistante",
+  "item.minecraft.potion.effect.glowing": "Potion de surbrillance",
+  "item.minecraft.splash_potion.effect.glowing": "Potion de surbrillance jetable",
+  "item.minecraft.lingering_potion.effect.glowing": "Potion de surbrillance persistante",
+  "item.minecraft.potion.effect.lightning": "Potion de foudre",
+  "item.minecraft.splash_potion.effect.lightning": "Potion de foudre jetable",
+  "item.minecraft.lingering_potion.effect.lightning": "Potion de foudre persistante",
+
   "item.necessariesmod.fish_sword": "Épée de poisson",
 
   "effect.necessariesmod.burning": "Brûlant",
+  "effect.necessariesmod.lightning": "Foudre",
+  "effect.necessariesmod.confusing": "Confus",
+  "effect.necessariesmod.confusing.message": "Vous êtes confus !",
 
   "creativetab.necessariesmod.food_tab": "Necessaries Mod Nourritures",
   "creativetab.necessariesmod.item_tab": "Necessaries Mod"

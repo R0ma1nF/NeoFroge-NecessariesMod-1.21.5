@@ -1,4 +1,4 @@
-package net.kingusratus.necessariesmod.effect;
+package net.kingusratus.necessariesmod.effect.consume_effect;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
