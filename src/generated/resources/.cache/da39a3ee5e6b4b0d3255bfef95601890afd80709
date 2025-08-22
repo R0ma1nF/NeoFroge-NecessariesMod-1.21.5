@@ -1,4 +1,4 @@
-// 1.21.5	2025-08-20T00:49:56.0497329	
+// 1.21.5	2025-08-23T01:24:35.0255314	
 67110f8cc47285b87e94df22789b4598e78d2e85 data/minecraft/advancement/recipes/food/bread.json
 f801a5f388ca5bef51c0ca6cabd28c6814e593a3 data/minecraft/recipe/bread.json
 c78c506e7c1435df37fad9ceb04adb7380ba83bd data/necessariesmod/advancement/recipes/food/apple_jam.json
@@ -20,6 +20,7 @@ a1f392ede5388360721c53ee7de4e87beb19dadc data/necessariesmod/advancement/recipes
 8b8cee1ee248258be9ae0efd870bd55e5e4c6928 data/necessariesmod/advancement/recipes/food/cooked_tropical_fish_from_smelting_tropical_fish.json
 59f1e18d9c3002683d35d962cb617e45cfbe421c data/necessariesmod/advancement/recipes/food/cooked_tropical_fish_from_smoking_tropical_fish.json
 95b9e2adcabf3046f5b2cd7ed858b8b914037965 data/necessariesmod/advancement/recipes/food/dirt_soup.json
+5b7d30dc9e8ce56ef39c4685bcc9daefb7939160 data/necessariesmod/advancement/recipes/food/endcake.json
 85a221916fb3cd184f7f987cbdcede8224a3fc18 data/necessariesmod/advancement/recipes/food/ender_cookie.json
 157d8e4b176a8f732fea0f3bdfb6036f8a57b281 data/necessariesmod/advancement/recipes/food/ender_soup.json
 8e7741323d00062d342005f3ab25cd920534202c data/necessariesmod/advancement/recipes/food/fish_skewer.json
@@ -74,6 +75,7 @@ bd9b748874b9aa1ece54a23b5d30d69b59a3aa81 data/necessariesmod/recipe/chocolate.js
 c06ddc1d5b9e759d1a14c6c2a2626bc1f69d6190 data/necessariesmod/recipe/cooked_tropical_fish_from_smelting_tropical_fish.json
 8f592b93af799ba871da89a808007244658ab962 data/necessariesmod/recipe/cooked_tropical_fish_from_smoking_tropical_fish.json
 eed2adb0c2df10892777e0a9340df5321a46548e data/necessariesmod/recipe/dirt_soup.json
+6d322437346d87ef84712e701393fd335f5f14a1 data/necessariesmod/recipe/endcake.json
 1fff1ca7ee834c42ddfd2383fafa90c9b31b0dee data/necessariesmod/recipe/ender_cookie.json
 1fddeb85f7f47654618f09f2f318b203ff4d035b data/necessariesmod/recipe/ender_soup.json
 4fb6750868b95b40a217b186673dcba419578a1e data/necessariesmod/recipe/fish_skewer.json

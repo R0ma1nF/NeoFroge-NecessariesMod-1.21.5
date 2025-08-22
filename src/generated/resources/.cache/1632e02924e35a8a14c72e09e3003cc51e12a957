@@ -1,5 +1,6 @@
-// 1.21.5	2025-08-20T00:49:56.0532329	Model Definitions - necessariesmod
+// 1.21.5	2025-08-23T00:52:21.6803029	Model Definitions - necessariesmod
 2af8d27f57bf272a34de7c9accaa2cc2c3c57963 assets/necessariesmod/blockstates/deepslate_ruby_ore.json
+719c271d6e728e174918c49785f6b921af38b81c assets/necessariesmod/blockstates/endcake.json
 3d8532dba15f0c1b273f9e006fad6b3449155a9a assets/necessariesmod/blockstates/ruby_block.json
 78b126afc5d12a45cb8d0701691663dabfe55e16 assets/necessariesmod/blockstates/ruby_ore.json
 068f92f921a1d96ffed9f6e007f1e274998451e5 assets/necessariesmod/blockstates/steel_block.json
@@ -23,6 +24,7 @@ adc17384ad584b8cca9c6e1c4bf79997e9c28b20 assets/necessariesmod/items/coconut_pie
 7e32dbc4cc3ea7e141c088fc1bece54a358a425a assets/necessariesmod/items/deepslate_ruby_ore.json
 eea2e58b43257393d7cc2bc9e137f32c63a9c13d assets/necessariesmod/items/dirt_soup.json
 077ed2dd62342dabdce309debb4e846bae45e81b assets/necessariesmod/items/dubious_food.json
+0e8324e7cc28d645a20203f6b03f01d391baed23 assets/necessariesmod/items/endcake.json
 7ed3dca04265af695799bc9626be505f5f0605fb assets/necessariesmod/items/ender_cookie.json
 c3738b2853cebdc7b91354443f05393085b4ca75 assets/necessariesmod/items/ender_soup.json
 745b7248d011c4cc3f798fa876e31648f9372669 assets/necessariesmod/items/fish_skewer.json
@@ -54,6 +56,13 @@ aec961c8c46c68a89fffb2a55aa2aed45566fe97 assets/necessariesmod/items/the_thing.j
 f59bea1b8121550cbfde26df1d74ef881f56c6b0 assets/necessariesmod/items/void_cookie.json
 6939c652b23be560bb445a9c084066784b0bf915 assets/necessariesmod/items/zombie_jerky.json
 89ac0a91883583717aa4d3c48de97581279784c5 assets/necessariesmod/models/block/deepslate_ruby_ore.json
+690d5248623a90837600544f6997f84760a7fbe9 assets/necessariesmod/models/block/endcake.json
+0b0e84e58cf320a15813291513a8f975aecec257 assets/necessariesmod/models/block/endcake_slice1.json
+99f3afa3c01e3de74fec8303c5174b419a9264df assets/necessariesmod/models/block/endcake_slice2.json
+e8be3aa91e85a499c8ae1697da9eab3cb1f7f52e assets/necessariesmod/models/block/endcake_slice3.json
+82bf13b82af2b741d109d17d92b2af3d743964a9 assets/necessariesmod/models/block/endcake_slice4.json
+b5a16f1873d9167f627c8dd2e2042de5b719f4c1 assets/necessariesmod/models/block/endcake_slice5.json
+3811e889cbe08fbb38437c4039249a4785bbf1b9 assets/necessariesmod/models/block/endcake_slice6.json
 0c56fe65a50a759d241d66433b15b7a8dc935cb6 assets/necessariesmod/models/block/ruby_block.json
 6574257b82582f9557b0cb49f4ba82d54a4f0786 assets/necessariesmod/models/block/ruby_ore.json
 20bf1381625a0895a1b4cee232495daca7e2eec3 assets/necessariesmod/models/block/steel_block.json
@@ -76,6 +85,7 @@ a9df67d99d7e8a0860bdccfb5ff3d6433c99da92 assets/necessariesmod/models/item/choco
 25eb155b69de6a4bddacbf525fff4c19358ca5dd assets/necessariesmod/models/item/cooked_tropical_fish.json
 1f2ff9da7538251c785c31246e312dc53eba522a assets/necessariesmod/models/item/dirt_soup.json
 1737072ab742a83d76ca78a17d1419223e65afe8 assets/necessariesmod/models/item/dubious_food.json
+899ed9fc71493bbdea311b7119826800415039ec assets/necessariesmod/models/item/endcake.json
 db390af580f739facf2fe7fe0b04cb2aeff368d0 assets/necessariesmod/models/item/ender_cookie.json
 df51939facd8c45e521a9624fe64651713f04232 assets/necessariesmod/models/item/ender_soup.json
 bb791523e0b4b49cccbe7fa67e2c402dd214371b assets/necessariesmod/models/item/fish_skewer.json

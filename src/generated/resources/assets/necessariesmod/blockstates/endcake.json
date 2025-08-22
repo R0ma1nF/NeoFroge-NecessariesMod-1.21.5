@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "necessariesmod:block/endcake"
+    },
+    "bites=1": {
+      "model": "necessariesmod:block/endcake_slice1"
+    },
+    "bites=2": {
+      "model": "necessariesmod:block/endcake_slice2"
+    },
+    "bites=3": {
+      "model": "necessariesmod:block/endcake_slice3"
+    },
+    "bites=4": {
+      "model": "necessariesmod:block/endcake_slice4"
+    },
+    "bites=5": {
+      "model": "necessariesmod:block/endcake_slice5"
+    },
+    "bites=6": {
+      "model": "necessariesmod:block/endcake_slice6"
+    }
+  }
+}

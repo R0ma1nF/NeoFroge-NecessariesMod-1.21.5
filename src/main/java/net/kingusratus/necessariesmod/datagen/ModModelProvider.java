@@ -1,15 +1,25 @@
 package net.kingusratus.necessariesmod.datagen;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import net.kingusratus.necessariesmod.NecessariesMod;
 import net.kingusratus.necessariesmod.block.ModBlocks;
 import net.kingusratus.necessariesmod.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
+import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.client.data.models.blockstates.PropertyDispatch;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.data.models.model.ModelLocationUtils;
 import net.minecraft.core.Holder;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.neoforged.fml.common.Mod;
 
 import java.util.stream.Stream;
 
@@ -22,16 +32,16 @@ public class ModModelProvider extends ModelProvider {
     @Override
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         // Register food models
-        registerFoodModels(itemModels);
+        registerFoodModels(itemModels, blockModels);
 
         // Register tool models
-        registerToolsModels(itemModels);
+        registerToolsModels(itemModels, blockModels);
 
         // Register block models
-        registerBlockModels(blockModels);
+        registerBlockModels(itemModels, blockModels);
 
         // Register items models
-        registerItemsModels(itemModels);
+        registerItemsModels(itemModels, blockModels);
     }
 
     @Override
@@ -39,12 +49,12 @@ public class ModModelProvider extends ModelProvider {
         return ModItems.ITEMS.getEntries().stream();
     }
 
-    private void registerItemsModels(ItemModelGenerators itemModels) {
+    private void registerItemsModels(ItemModelGenerators itemModels, BlockModelGenerators blockModels) {
         itemModels.generateFlatItem(ModItems.STEEL_INGOT.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.RUBY.get(), ModelTemplates.FLAT_ITEM);
     }
 
-    private void registerFoodModels(ItemModelGenerators itemModels) {
+    private void registerFoodModels(ItemModelGenerators itemModels, BlockModelGenerators blockModels) {
         itemModels.generateFlatItem(ModItems.CHERRY.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.ORANGE.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.BANANA.get(), ModelTemplates.FLAT_ITEM);
@@ -88,13 +98,15 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.DUBIOUS_FOOD.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.THE_THING.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.NETHERITE_STEAK.get(), ModelTemplates.FLAT_ITEM);
+
+        ModModels.createCakeModels(ModBlocks.ENDCAKE_BLOCK.get(), ModBlocks.ENDCAKE_BLOCK.asItem(), blockModels, itemModels);
     }
 
-    private void registerToolsModels(ItemModelGenerators itemModels) {
+    private void registerToolsModels(ItemModelGenerators itemModels, BlockModelGenerators blockModels) {
         itemModels.generateFlatItem(ModItems.FISH_SWORD.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
     }
 
-    private void registerBlockModels(BlockModelGenerators blockModels) {
+    private void registerBlockModels(ItemModelGenerators itemModels, BlockModelGenerators blockModels) {
         blockModels.createTrivialCube(ModBlocks.RUBY_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.STEEL_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.RUBY_ORE.get());

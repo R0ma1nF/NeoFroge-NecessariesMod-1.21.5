@@ -1,6 +1,7 @@
 package net.kingusratus.necessariesmod.datagen;
 
 import net.kingusratus.necessariesmod.NecessariesMod;
+import net.kingusratus.necessariesmod.block.ModBlocks;
 import net.kingusratus.necessariesmod.item.ModItems;
 import net.kingusratus.necessariesmod.utils.ModTags;
 import net.minecraft.core.HolderLookup;
@@ -112,6 +113,17 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_wheat", has(Items.WHEAT))
                 .save(this.output);
 
+        shaped(RecipeCategory.FOOD, ModBlocks.ENDCAKE_BLOCK.asItem())
+                .pattern("MMM")
+                .pattern("SES")
+                .pattern("WWW")
+                .define('M', Items.MILK_BUCKET)
+                .define('S', Items.SUGAR)
+                .define('E', Items.DRAGON_EGG)
+                .define('W', Items.WHEAT)
+                .unlockedBy("has_dragon_egg", has(Items.DRAGON_EGG))
+                .save(this.output);
+
         shaped(RecipeCategory.FOOD, ModItems.COMPRESSED_BREAD.get(), 1)
                 .pattern("###")
                 .pattern("###")
@@ -199,7 +211,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_egg", has(ItemTags.EGGS))
                 .save(this.output);
 
-        // orange, cherry, banana and coconut pies
         shapeless(RecipeCategory.FOOD, ModItems.CHERRY_PIE, 1)
                 .requires(ModItems.CHERRY.get())
                 .requires(Items.SUGAR)

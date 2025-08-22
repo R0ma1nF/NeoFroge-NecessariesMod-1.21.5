@@ -1,0 +1,44 @@
+{
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#bottom"
+        },
+        "east": {
+          "texture": "#side"
+        },
+        "north": {
+          "texture": "#side"
+        },
+        "south": {
+          "texture": "#side"
+        },
+        "up": {
+          "texture": "#top"
+        },
+        "west": {
+          "texture": "#inside"
+        }
+      },
+      "from": [
+        9,
+        0,
+        1
+      ],
+      "to": [
+        15,
+        8,
+        15
+      ]
+    }
+  ],
+  "textures": {
+    "bottom": "necessariesmod:block/endcake_bottom",
+    "inside": "necessariesmod:block/endcake_inner",
+    "particle": "necessariesmod:block/endcake_side",
+    "side": "necessariesmod:block/endcake_side",
+    "top": "necessariesmod:block/endcake_top"
+  }
+}

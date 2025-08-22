@@ -72,6 +72,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ENDER_COOKIE);
                         output.accept(ModItems.VOID_COOKIE);
                         output.accept(ModItems.RANDOM_COOKIE);
+                        output.accept(ModBlocks.ENDCAKE_BLOCK);
                         output.accept(ModItems.PANCAKE);
                         output.accept(ModItems.THE_THING);
                         output.accept(ModItems.FISH_SWORD);
