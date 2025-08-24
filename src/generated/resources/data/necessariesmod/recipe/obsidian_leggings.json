@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "O": "minecraft:obsidian"
+  },
+  "pattern": [
+    "OOO",
+    "O O",
+    "O O"
+  ],
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:obsidian_leggings"
+  }
+}

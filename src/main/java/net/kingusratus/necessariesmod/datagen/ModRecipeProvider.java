@@ -21,14 +21,42 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider {
 
+    // Constants pour les valeurs de cuisson communes
+    private static final float COOKING_EXPERIENCE = 0.35f;
+    private static final int COOKING_TIME = 200;
+
     protected ModRecipeProvider(HolderLookup.Provider provider, RecipeOutput output) {
         super(provider, output);
     }
 
     @Override
     protected void buildRecipes() {
+        buildShapedRecipes();
+        buildShapelessRecipes();
+        buildSmeltingRecipes();
+        buildSmokingRecipes();
+        buildCampfireRecipes();
+    }
 
-        // SHAPED AND SHAPELESS RECIPES
+    // ================================
+    // RECETTES FAÇONNÉES (SHAPED)
+    // ================================
+
+    private void buildShapedRecipes() {
+        // Recettes de nourriture de base
+        buildBasicFoodRecipes();
+
+        // Recettes de brochettes
+        buildSkewerRecipes();
+
+        // Recettes spéciales
+        buildSpecialRecipes();
+
+        // Recettes d'armures
+        buildArmorRecipes();
+    }
+
+    private void buildBasicFoodRecipes() {
         shaped(RecipeCategory.FOOD, ModItems.SAUSAGE.get(), 3)
                 .pattern("MMM")
                 .define('M', ModTags.Items.MEATS)
@@ -64,6 +92,20 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_cheese", has(ModItems.CHEESE.get()))
                 .save(this.output);
 
+        shaped(RecipeCategory.FOOD, ModItems.PANCAKE.get(), 3)
+                .pattern("SHS")
+                .pattern("WWW")
+                .pattern("EME")
+                .define('S', Items.SUGAR)
+                .define('H', Items.HONEY_BOTTLE)
+                .define('W', Items.WHEAT)
+                .define('E', ItemTags.EGGS)
+                .define('M', Items.MILK_BUCKET)
+                .unlockedBy("has_honey", has(Items.HONEY_BOTTLE))
+                .save(this.output);
+    }
+
+    private void buildSkewerRecipes() {
         shaped(RecipeCategory.FOOD, ModItems.MEAT_SKEWER.get(), 3)
                 .pattern("MMM")
                 .pattern(" S ")
@@ -105,7 +147,9 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('S', Items.STICK)
                 .unlockedBy("has_cactus", has(Items.CACTUS))
                 .save(this.output);
+    }
 
+    private void buildSpecialRecipes() {
         shaped(RecipeCategory.FOOD, ModItems.STONE_BREAD.get(), 1)
                 .pattern("CWC")
                 .define('C', Items.COBBLESTONE)
@@ -140,24 +184,83 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('S', Items.STICK)
                 .unlockedBy("has_fishes", has(ModTags.Items.FISHES))
                 .save(this.output);
+    }
 
-        shaped(RecipeCategory.FOOD, ModItems.PANCAKE.get(), 3)
-                .pattern("SHS")
-                .pattern("WWW")
-                .pattern("EME")
-                .define('S', Items.SUGAR)
-                .define('H', Items.HONEY_BOTTLE)
-                .define('W', Items.WHEAT)
-                .define('E', ItemTags.EGGS)
-                .define('M', Items.MILK_BUCKET)
-                .unlockedBy("has_honey", has(Items.HONEY_BOTTLE))
+    private void buildArmorRecipes() {
+        shaped(RecipeCategory.COMBAT, ModItems.CACTUS_HELMET.get())
+                .pattern("CCC")
+                .pattern("C C")
+                .define('C', Items.CACTUS)
+                .unlockedBy("has_cactus", has(Items.CACTUS))
                 .save(this.output);
 
-        shapeless(RecipeCategory.FOOD, Items.BREAD, 9)
-                .requires(ModItems.COMPRESSED_BREAD)
-                .unlockedBy("has_compressed_bread", has(ModItems.COMPRESSED_BREAD))
+        shaped(RecipeCategory.COMBAT, ModItems.CACTUS_CHESTPLATE.get())
+                .pattern("C C")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', Items.CACTUS)
+                .unlockedBy("has_cactus", has(Items.CACTUS))
                 .save(this.output);
 
+        shaped(RecipeCategory.COMBAT, ModItems.CACTUS_LEGGINGS.get())
+                .pattern("CCC")
+                .pattern("C C")
+                .pattern("C C")
+                .define('C', Items.CACTUS)
+                .unlockedBy("has_cactus", has(Items.CACTUS))
+                .save(this.output);
+
+        shaped(RecipeCategory.COMBAT, ModItems.CACTUS_BOOTS.get())
+                .pattern("C C")
+                .pattern("C C")
+                .define('C', Items.CACTUS)
+                .unlockedBy("has_cactus", has(Items.CACTUS))
+                .save(this.output);
+
+        shaped(RecipeCategory.COMBAT, ModItems.OBSIDIAN_HELMET.get())
+                .pattern("OOO")
+                .pattern("O O")
+                .define('O', Items.OBSIDIAN)
+                .unlockedBy("has_obsidian", has(Items.OBSIDIAN))
+                .save(this.output);
+
+        shaped(RecipeCategory.COMBAT, ModItems.OBSIDIAN_CHESTPLATE.get())
+                .pattern("O O")
+                .pattern("OOO")
+                .pattern("OOO")
+                .define('O', Items.OBSIDIAN)
+                .unlockedBy("has_obsidian", has(Items.OBSIDIAN))
+                .save(this.output);
+
+        shaped(RecipeCategory.COMBAT, ModItems.OBSIDIAN_LEGGINGS.get())
+                .pattern("OOO")
+                .pattern("O O")
+                .pattern("O O")
+                .define('O', Items.OBSIDIAN)
+                .unlockedBy("has_obsidian", has(Items.OBSIDIAN))
+                .save(this.output);
+
+        shaped(RecipeCategory.COMBAT, ModItems.OBSIDIAN_BOOTS.get())
+                .pattern("O O")
+                .pattern("O O")
+                .define('O', Items.OBSIDIAN)
+                .unlockedBy("has_obsidian", has(Items.OBSIDIAN))
+                .save(this.output);
+    }
+
+    // ================================
+    // RECETTES SANS FORME (SHAPELESS)
+    // ================================
+
+    private void buildShapelessRecipes() {
+        buildCookieRecipes();
+        buildPieRecipes();
+        buildJamRecipes();
+        buildSoupRecipes();
+        buildMiscShapelessRecipes();
+    }
+
+    private void buildCookieRecipes() {
         shapeless(RecipeCategory.FOOD, ModItems.ENDER_COOKIE, 4)
                 .requires(Items.ENDER_EYE)
                 .requires(Items.WHEAT)
@@ -179,29 +282,9 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(Items.SUGAR)
                 .unlockedBy("has_nether_star", has(Items.NETHER_STAR))
                 .save(this.output);
+    }
 
-        shapeless(RecipeCategory.FOOD, ModItems.THE_THING, 1)
-                .requires(Items.NETHER_STAR)
-                .requires(ModItems.DUBIOUS_FOOD)
-                .requires(ModItems.DIRT_SOUP)
-                .requires(ModItems.GRAVEL_SOUP)
-                .unlockedBy("has_nether_star", has(Items.NETHER_STAR))
-                .save(this.output);
-
-        shapeless(RecipeCategory.FOOD, ModItems.CHOCOLATE.get(), 1)
-                .requires(Items.COCOA_BEANS)
-                .requires(Items.SUGAR)
-                .unlockedBy("has_cacao", has(Items.COCOA_BEANS))
-                .unlockedBy("has_sugar", has(Items.SUGAR))
-                .save(this.output);
-
-        shapeless(RecipeCategory.FOOD, ModItems.HOT_CHOCOLATE, 3)
-                .requires(ModItems.CHOCOLATE.get())
-                .requires(Items.MILK_BUCKET)
-                .unlockedBy("has_chocolate", has(ModItems.CHOCOLATE.get()))
-                .unlockedBy("has_milk", has(Items.MILK_BUCKET))
-                .save(this.output);
-
+    private void buildPieRecipes() {
         shapeless(RecipeCategory.FOOD, ModItems.APPLE_PIE, 1)
                 .requires(Items.APPLE)
                 .requires(Items.SUGAR)
@@ -240,7 +323,9 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(ItemTags.EGGS)
                 .unlockedBy("has_coconut", has(ModItems.COCONUT.get()))
                 .save(this.output);
+    }
 
+    private void buildJamRecipes() {
         shapeless(RecipeCategory.FOOD, ModItems.APPLE_JAM, 2)
                 .requires(Items.APPLE)
                 .requires(Items.SUGAR)
@@ -268,14 +353,9 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_banana", has(ModItems.BANANA.get()))
                 .unlockedBy("has_sugar", has(Items.SUGAR))
                 .save(this.output);
+    }
 
-        shapeless(RecipeCategory.FOOD, ModItems.CHEESE_OMELETTE)
-                .requires(ModItems.CHEESE.get())
-                .requires(ModItems.OMELETTE.get())
-                .unlockedBy("has_cheese", has(ModItems.CHEESE.get()))
-                .unlockedBy("has_omelette", has(ModItems.OMELETTE.get()))
-                .save(this.output);
-
+    private void buildSoupRecipes() {
         shapeless(RecipeCategory.FOOD, ModItems.DIRT_SOUP)
                 .requires(Items.DIRT)
                 .requires(Items.BOWL)
@@ -300,6 +380,42 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(Items.BOWL)
                 .unlockedBy("has_dragon_breath", has(Items.DRAGON_BREATH))
                 .save(this.output);
+    }
+
+    private void buildMiscShapelessRecipes() {
+        shapeless(RecipeCategory.FOOD, Items.BREAD, 9)
+                .requires(ModItems.COMPRESSED_BREAD)
+                .unlockedBy("has_compressed_bread", has(ModItems.COMPRESSED_BREAD))
+                .save(this.output);
+
+        shapeless(RecipeCategory.FOOD, ModItems.THE_THING, 1)
+                .requires(Items.NETHER_STAR)
+                .requires(ModItems.DUBIOUS_FOOD)
+                .requires(ModItems.DIRT_SOUP)
+                .requires(ModItems.GRAVEL_SOUP)
+                .unlockedBy("has_nether_star", has(Items.NETHER_STAR))
+                .save(this.output);
+
+        shapeless(RecipeCategory.FOOD, ModItems.CHOCOLATE.get(), 1)
+                .requires(Items.COCOA_BEANS)
+                .requires(Items.SUGAR)
+                .unlockedBy("has_cacao", has(Items.COCOA_BEANS))
+                .unlockedBy("has_sugar", has(Items.SUGAR))
+                .save(this.output);
+
+        shapeless(RecipeCategory.FOOD, ModItems.HOT_CHOCOLATE, 3)
+                .requires(ModItems.CHOCOLATE.get())
+                .requires(Items.MILK_BUCKET)
+                .unlockedBy("has_chocolate", has(ModItems.CHOCOLATE.get()))
+                .unlockedBy("has_milk", has(Items.MILK_BUCKET))
+                .save(this.output);
+
+        shapeless(RecipeCategory.FOOD, ModItems.CHEESE_OMELETTE)
+                .requires(ModItems.CHEESE.get())
+                .requires(ModItems.OMELETTE.get())
+                .unlockedBy("has_cheese", has(ModItems.CHEESE.get()))
+                .unlockedBy("has_omelette", has(ModItems.OMELETTE.get()))
+                .save(this.output);
 
         shapeless(RecipeCategory.FOOD, ModItems.NETHERITE_STEAK)
                 .requires(Items.COOKED_BEEF)
@@ -307,153 +423,63 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(Items.NETHERITE_SCRAP)
                 .unlockedBy("has_netherite_scrap", has(Items.NETHERITE_SCRAP))
                 .save(this.output);
-
-        // SMELTING RECIPE
-
-        oreSmelting(
-                this.output,
-                List.of(Items.MILK_BUCKET),
-                RecipeCategory.FOOD,
-                new ItemStack(ModItems.CHEESE.get(), 8),
-                0.35f,
-                200,
-                "cheese"
-        );
-
-        oreSmelting(
-                this.output,
-                List.of(Items.EGG, Items.BLUE_EGG, Items.BROWN_EGG),
-                RecipeCategory.FOOD,
-                ModItems.OMELETTE.get(),
-                0.35f,
-                200,
-                "omelette"
-        );
-
-        oreSmelting(
-                this.output,
-                List.of(Items.ROTTEN_FLESH),
-                RecipeCategory.FOOD,
-                ModItems.ZOMBIE_JERKY.get(),
-                0.35f,
-                200,
-                "zombie_jerky"
-        );
-
-        oreSmelting(
-                this.output,
-                List.of(Items.TROPICAL_FISH),
-                RecipeCategory.FOOD,
-                ModItems.COOKED_TROPICAL_FISH.get(),
-                0.35f,
-                200,
-                "cooked_tropical_fish"
-        );
-
-        // SMOKER RECIPES
-
-        oreSmoking(
-                this.output,
-                List.of(Items.MILK_BUCKET),
-                RecipeCategory.FOOD,
-                new ItemStack(ModItems.CHEESE.get(), 8),
-                0.35f,
-                200,
-                "cheese"
-        );
-
-        oreSmoking(
-                this.output,
-                List.of(Items.EGG, Items.BLUE_EGG, Items.BROWN_EGG),
-                RecipeCategory.FOOD,
-                ModItems.OMELETTE.get(),
-                0.35f,
-                200,
-                "omelette"
-        );
-
-        oreSmoking(
-                this.output,
-                List.of(ModItems.CHEESE.get()),
-                RecipeCategory.FOOD,
-                ModItems.SMOKED_CHEESE.get(),
-                0.35f,
-                200,
-                "smoked_cheese"
-        );
-
-        oreSmoking(
-                this.output,
-                List.of(Items.ROTTEN_FLESH),
-                RecipeCategory.FOOD,
-                ModItems.ZOMBIE_JERKY.get(),
-                0.35f,
-                200,
-                "zombie_jerky"
-        );
-
-        oreSmoking(
-                this.output,
-                List.of(Items.TROPICAL_FISH),
-                RecipeCategory.FOOD,
-                ModItems.COOKED_TROPICAL_FISH.get(),
-                0.35f,
-                200,
-                "cooked_tropical_fish"
-        );
-
-        // CAMPFIRE RECIPES
-
-        oreCampfireCooking(
-                this.output,
-                List.of(Items.EGG, Items.BLUE_EGG, Items.BROWN_EGG),
-                RecipeCategory.FOOD,
-                ModItems.OMELETTE.get(),
-                0.35f,
-                200,
-                "omelette"
-        );
-
-        oreCampfireCooking(
-                this.output,
-                List.of(ModItems.CHEESE.get()),
-                RecipeCategory.FOOD,
-                ModItems.SMOKED_CHEESE.get(),
-                0.35f,
-                200,
-                "smoked_cheese"
-        );
-
-        oreCampfireCooking(
-                this.output,
-                List.of(Items.MILK_BUCKET),
-                RecipeCategory.FOOD,
-                new ItemStack(ModItems.CHEESE.get(), 8),
-                0.35f,
-                200,
-                "cheese"
-        );
-
-        oreCampfireCooking(
-                this.output,
-                List.of(Items.ROTTEN_FLESH),
-                RecipeCategory.FOOD,
-                ModItems.ZOMBIE_JERKY.get(),
-                0.35f,
-                200,
-                "zombie_jerky"
-        );
-
-        oreCampfireCooking(
-                this.output,
-                List.of(Items.TROPICAL_FISH),
-                RecipeCategory.FOOD,
-                ModItems.COOKED_TROPICAL_FISH.get(),
-                0.35f,
-                200,
-                "cooked_tropical_fish"
-        );
     }
+
+    // ================================
+    // RECETTES DE CUISSON
+    // ================================
+
+    private void buildSmeltingRecipes() {
+        oreSmelting(this.output, List.of(Items.MILK_BUCKET), RecipeCategory.FOOD,
+                   new ItemStack(ModItems.CHEESE.get(), 8), COOKING_EXPERIENCE, COOKING_TIME, "cheese");
+
+        oreSmelting(this.output, List.of(Items.EGG, Items.BLUE_EGG, Items.BROWN_EGG),
+                   RecipeCategory.FOOD, ModItems.OMELETTE.get(), COOKING_EXPERIENCE, COOKING_TIME, "omelette");
+
+        oreSmelting(this.output, List.of(Items.ROTTEN_FLESH), RecipeCategory.FOOD,
+                   ModItems.ZOMBIE_JERKY.get(), COOKING_EXPERIENCE, COOKING_TIME, "zombie_jerky");
+
+        oreSmelting(this.output, List.of(Items.TROPICAL_FISH), RecipeCategory.FOOD,
+                   ModItems.COOKED_TROPICAL_FISH.get(), COOKING_EXPERIENCE, COOKING_TIME, "cooked_tropical_fish");
+    }
+
+    private void buildSmokingRecipes() {
+        oreSmoking(this.output, List.of(Items.MILK_BUCKET), RecipeCategory.FOOD,
+                  new ItemStack(ModItems.CHEESE.get(), 8), COOKING_EXPERIENCE, COOKING_TIME, "cheese");
+
+        oreSmoking(this.output, List.of(Items.EGG, Items.BLUE_EGG, Items.BROWN_EGG),
+                  RecipeCategory.FOOD, ModItems.OMELETTE.get(), COOKING_EXPERIENCE, COOKING_TIME, "omelette");
+
+        oreSmoking(this.output, List.of(ModItems.CHEESE.get()), RecipeCategory.FOOD,
+                  ModItems.SMOKED_CHEESE.get(), COOKING_EXPERIENCE, COOKING_TIME, "smoked_cheese");
+
+        oreSmoking(this.output, List.of(Items.ROTTEN_FLESH), RecipeCategory.FOOD,
+                  ModItems.ZOMBIE_JERKY.get(), COOKING_EXPERIENCE, COOKING_TIME, "zombie_jerky");
+
+        oreSmoking(this.output, List.of(Items.TROPICAL_FISH), RecipeCategory.FOOD,
+                  ModItems.COOKED_TROPICAL_FISH.get(), COOKING_EXPERIENCE, COOKING_TIME, "cooked_tropical_fish");
+    }
+
+    private void buildCampfireRecipes() {
+        oreCampfireCooking(this.output, List.of(Items.EGG, Items.BLUE_EGG, Items.BROWN_EGG),
+                          RecipeCategory.FOOD, ModItems.OMELETTE.get(), COOKING_EXPERIENCE, COOKING_TIME, "omelette");
+
+        oreCampfireCooking(this.output, List.of(ModItems.CHEESE.get()), RecipeCategory.FOOD,
+                          ModItems.SMOKED_CHEESE.get(), COOKING_EXPERIENCE, COOKING_TIME, "smoked_cheese");
+
+        oreCampfireCooking(this.output, List.of(Items.MILK_BUCKET), RecipeCategory.FOOD,
+                          new ItemStack(ModItems.CHEESE.get(), 8), COOKING_EXPERIENCE, COOKING_TIME, "cheese");
+
+        oreCampfireCooking(this.output, List.of(Items.ROTTEN_FLESH), RecipeCategory.FOOD,
+                          ModItems.ZOMBIE_JERKY.get(), COOKING_EXPERIENCE, COOKING_TIME, "zombie_jerky");
+
+        oreCampfireCooking(this.output, List.of(Items.TROPICAL_FISH), RecipeCategory.FOOD,
+                          ModItems.COOKED_TROPICAL_FISH.get(), COOKING_EXPERIENCE, COOKING_TIME, "cooked_tropical_fish");
+    }
+
+    // ================================
+    // MÉTHODES UTILITAIRES
+    // ================================
 
     protected void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                float pExperience, int pCookingTIme, String pGroup) {

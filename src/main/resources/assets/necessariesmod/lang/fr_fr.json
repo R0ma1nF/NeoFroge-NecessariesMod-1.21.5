@@ -64,10 +64,20 @@
 
   "item.necessariesmod.fish_sword": "Épée de poisson",
 
+  "item.necessariesmod.cactus_helmet": "Casque de cactus",
+  "item.necessariesmod.cactus_chestplate": "Plastron de cactus",
+  "item.necessariesmod.cactus_leggings": "Jambières de cactus",
+  "item.necessariesmod.cactus_boots": "Bottes de cactus",
+  "item.necessariesmod.obsidian_helmet": "Casque d'obsidienne",
+  "item.necessariesmod.obsidian_chestplate": "Plastron d'obsidienne",
+  "item.necessariesmod.obsidian_leggings": "Jambières d'obsidienne",
+  "item.necessariesmod.obsidian_boots": "Bottes d'obsidienne",
+
   "effect.necessariesmod.burning": "Brûlant",
   "effect.necessariesmod.lightning": "Foudre",
   "effect.necessariesmod.confusing": "Confus",
   "effect.necessariesmod.confusing.message": "Vous êtes confus !",
+  "effect.necessariesmod.prickly": "Épineux",
 
   "creativetab.necessariesmod.food_tab": "Necessaries Mod Nourritures",
   "creativetab.necessariesmod.item_tab": "Necessaries Mod"

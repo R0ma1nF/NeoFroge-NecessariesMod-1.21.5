@@ -5,6 +5,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import net.kingusratus.necessariesmod.NecessariesMod;
 import net.kingusratus.necessariesmod.block.ModBlocks;
+import net.kingusratus.necessariesmod.item.ModArmorMaterials;
 import net.kingusratus.necessariesmod.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
@@ -104,6 +105,16 @@ public class ModModelProvider extends ModelProvider {
 
     private void registerToolsModels(ItemModelGenerators itemModels, BlockModelGenerators blockModels) {
         itemModels.generateFlatItem(ModItems.FISH_SWORD.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+
+        itemModels.generateTrimmableItem(ModItems.CACTUS_HELMET.get(), ModArmorMaterials.CACTUS, ResourceLocation.fromNamespaceAndPath(NecessariesMod.MOD_ID, "cactus"), false);
+        itemModels.generateTrimmableItem(ModItems.CACTUS_CHESTPLATE.get(), ModArmorMaterials.CACTUS, ResourceLocation.fromNamespaceAndPath(NecessariesMod.MOD_ID, "cactus"), false);
+        itemModels.generateTrimmableItem(ModItems.CACTUS_LEGGINGS.get(), ModArmorMaterials.CACTUS, ResourceLocation.fromNamespaceAndPath(NecessariesMod.MOD_ID, "cactus"), false);
+        itemModels.generateTrimmableItem(ModItems.CACTUS_BOOTS.get(), ModArmorMaterials.CACTUS, ResourceLocation.fromNamespaceAndPath(NecessariesMod.MOD_ID, "cactus"),  false);
+
+        itemModels.generateTrimmableItem(ModItems.OBSIDIAN_HELMET.get(), ModArmorMaterials.OBSIDIAN, ResourceLocation.fromNamespaceAndPath(NecessariesMod.MOD_ID, "obsidian"), false);
+        itemModels.generateTrimmableItem(ModItems.OBSIDIAN_CHESTPLATE.get(), ModArmorMaterials.OBSIDIAN, ResourceLocation.fromNamespaceAndPath(NecessariesMod.MOD_ID, "obsidian"), false);
+        itemModels.generateTrimmableItem(ModItems.OBSIDIAN_LEGGINGS.get(), ModArmorMaterials.OBSIDIAN, ResourceLocation.fromNamespaceAndPath(NecessariesMod.MOD_ID, "obsidian"), false);
+        itemModels.generateTrimmableItem(ModItems.OBSIDIAN_BOOTS.get(), ModArmorMaterials.OBSIDIAN, ResourceLocation.fromNamespaceAndPath(NecessariesMod.MOD_ID, "obsidian"), false);
     }
 
     private void registerBlockModels(ItemModelGenerators itemModels, BlockModelGenerators blockModels) {

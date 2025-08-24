@@ -21,7 +21,8 @@ public class MilkBucketHandler {
     public static void onRightClickItem(PlayerInteractEvent.RightClickItem event) {
         Player player = event.getEntity();
         ItemStack stack = event.getItemStack();
-
+        // A activer quand le fluid de lait sera implementé
+        /*
         if (stack.getItem() == Items.MILK_BUCKET) {
             HitResult hit = player.pick(5.0D, 0.0F, false);
             if (hit.getType() == HitResult.Type.BLOCK) {
@@ -41,6 +42,6 @@ public class MilkBucketHandler {
                 event.setCancellationResult(InteractionResult.SUCCESS);
                 event.setCanceled(true);
             }
-        }
+        }*/
     }
 }

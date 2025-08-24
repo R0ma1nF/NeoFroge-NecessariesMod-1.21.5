@@ -31,6 +31,13 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.COOKED_SALMON)
                 .add(ModItems.COOKED_TROPICAL_FISH.get());
 
+        tag(ModTags.Items.REPAIRS_CACTUS_ARMOR)
+                .add(Items.CACTUS);
+
+        tag(ModTags.Items.REPAIRS_OBSIDIAN_ARMOR)
+                .add(Items.OBSIDIAN)
+                .add(Items.CRYING_OBSIDIAN);
+
         tag(ItemTags.SWORDS)
                 .add(ModItems.FISH_SWORD.get());
 

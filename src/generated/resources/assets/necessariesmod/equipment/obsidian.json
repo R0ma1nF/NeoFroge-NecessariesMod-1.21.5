@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "necessariesmod:obsidian/outer"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "necessariesmod:obsidian/inner"
+      }
+    ]
+  }
+}

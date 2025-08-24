@@ -3,12 +3,15 @@ package net.kingusratus.necessariesmod.item;
 import net.kingusratus.necessariesmod.NecessariesMod;
 import net.kingusratus.necessariesmod.food.ModConsumables;
 import net.kingusratus.necessariesmod.food.ModFoodProperties;
+import net.kingusratus.necessariesmod.item.custom.CactusArmorItem;
+import net.kingusratus.necessariesmod.item.custom.ObsidianArmorItem;
 import net.kingusratus.necessariesmod.item.custom.VoidCookieItem;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ToolMaterial;
+import net.minecraft.world.item.equipment.ArmorType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -120,6 +123,26 @@ public class ModItems {
      ***************************************************************************************/
     public static final DeferredItem<Item> FISH_SWORD = ITEMS.registerItem("fish_sword",
             (properties) -> new Item(properties.sword(ToolMaterial.IRON, 3.0F, -2.4F).food(ModFoodProperties.FISH_SWORD).component(DataComponents.CONSUMABLE, ModConsumables.DEFAULT_CONSUMABLE).usingConvertsTo(Items.STICK)));
+
+    /***************************************************************************************
+     * ARMOR
+     ***************************************************************************************/
+    public static final DeferredItem<Item> CACTUS_HELMET = ITEMS.registerItem("cactus_helmet",
+            (properties) -> new CactusArmorItem(properties.humanoidArmor(ModArmorMaterials.CACTUS_ARMOR_MATERIAL, ArmorType.HELMET)));
+    public static final DeferredItem<Item> CACTUS_CHESTPLATE = ITEMS.registerItem("cactus_chestplate",
+            (properties) -> new CactusArmorItem(properties.humanoidArmor(ModArmorMaterials.CACTUS_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
+    public static final DeferredItem<Item> CACTUS_LEGGINGS = ITEMS.registerItem("cactus_leggings",
+            (properties) -> new CactusArmorItem(properties.humanoidArmor(ModArmorMaterials.CACTUS_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
+    public static final DeferredItem<Item> CACTUS_BOOTS = ITEMS.registerItem("cactus_boots",
+            (properties) -> new CactusArmorItem(properties.humanoidArmor(ModArmorMaterials.CACTUS_ARMOR_MATERIAL, ArmorType.BOOTS)));
+    public static final DeferredItem<Item> OBSIDIAN_HELMET = ITEMS.registerItem("obsidian_helmet",
+            (properties) -> new ObsidianArmorItem(properties.humanoidArmor(ModArmorMaterials.OBSIDIAN_ARMOR_MATERIAL, ArmorType.HELMET)));
+    public static final DeferredItem<Item> OBSIDIAN_CHESTPLATE = ITEMS.registerItem("obsidian_chestplate",
+            (properties) -> new ObsidianArmorItem(properties.humanoidArmor(ModArmorMaterials.OBSIDIAN_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
+    public static final DeferredItem<Item> OBSIDIAN_LEGGINGS = ITEMS.registerItem("obsidian_leggings",
+            (properties) -> new ObsidianArmorItem(properties.humanoidArmor(ModArmorMaterials.OBSIDIAN_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
+    public static final DeferredItem<Item> OBSIDIAN_BOOTS = ITEMS.registerItem("obsidian_boots",
+            (properties) -> new ObsidianArmorItem(properties.humanoidArmor(ModArmorMaterials.OBSIDIAN_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
     public static void register(IEventBus eventBus) {
         // Register the items in the DeferredRegister

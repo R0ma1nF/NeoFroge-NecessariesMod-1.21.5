@@ -14,6 +14,8 @@ public class ModEffects {
     public static final Holder<MobEffect> BURNING = MOB_EFFECTS.register("burning", () -> new BurningEffect(MobEffectCategory.HARMFUL, 0xF56C27));
     public static final Holder<MobEffect> LIGHTNING = MOB_EFFECTS.register("lightning", () -> new LightningEffect(MobEffectCategory.HARMFUL, 0xF5C827));
     public static final Holder<MobEffect> CONFUSING = MOB_EFFECTS.register("confusing", () -> new ConfusingEffect(MobEffectCategory.BENEFICIAL, 0xA0A0A0));
+    public static final Holder<MobEffect> PRICKLY = MOB_EFFECTS.register("prickly", () -> new PricklyEffect(MobEffectCategory.HARMFUL, 0x4E944F));
+
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

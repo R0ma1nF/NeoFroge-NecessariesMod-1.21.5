@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "necessariesmod:cactus/outer"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "necessariesmod:cactus/inner"
+      }
+    ]
+  }
+}

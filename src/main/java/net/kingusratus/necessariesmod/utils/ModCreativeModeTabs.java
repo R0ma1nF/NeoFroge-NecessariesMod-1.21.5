@@ -25,6 +25,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RUBY_BLOCK);
                         output.accept(ModBlocks.RUBY_ORE);
                         output.accept(ModBlocks.DEEPSLATE_RUBY_ORE);
+                        output.accept(ModItems.CACTUS_HELMET);
+                        output.accept(ModItems.CACTUS_CHESTPLATE);
+                        output.accept(ModItems.CACTUS_LEGGINGS);
+                        output.accept(ModItems.CACTUS_BOOTS);
+                        output.accept(ModItems.OBSIDIAN_HELMET);
+                        output.accept(ModItems.OBSIDIAN_CHESTPLATE);
+                        output.accept(ModItems.OBSIDIAN_LEGGINGS);
+                        output.accept(ModItems.OBSIDIAN_BOOTS);
                     }).build());
 
     public static final Supplier<CreativeModeTab> NECESSARIESMOD_FOODS = CREATIVE_MODE_TAB.register("necessariesmod_foods",

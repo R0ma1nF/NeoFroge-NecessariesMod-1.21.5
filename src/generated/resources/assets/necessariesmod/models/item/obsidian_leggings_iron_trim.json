@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "necessariesmod:item/obsidian_leggings",
+    "layer1": "necessariesmod:obsidian_iron"
+  }
+}
