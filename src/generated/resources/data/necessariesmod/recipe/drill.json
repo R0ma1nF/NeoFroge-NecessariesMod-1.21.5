@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "necessariesmod:drill_casing",
+    "D": "necessariesmod:drill_handle",
+    "E": "necessariesmod:drill_engine",
+    "H": "necessariesmod:drill_head",
+    "S": "necessariesmod:steel_ingot"
+  },
+  "pattern": [
+    "SHS",
+    "DCD",
+    "SES"
+  ],
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:drill"
+  }
+}

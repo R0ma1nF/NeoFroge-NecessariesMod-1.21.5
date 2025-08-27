@@ -1,0 +1,6 @@
+// 1.21.5	2025-08-27T23:39:24.3205012	Loot Tables
+ba43beb8931bf751fab8170a895794fa7892312f data/minecraft/loot_table/blocks/cake.json
+1322a226ce61cbc0b8572411f2804eaecd7e6538 data/necessariesmod/loot_table/blocks/deepslate_ruby_ore.json
+282a976b16912c7a308d434774b48029a499509e data/necessariesmod/loot_table/blocks/ruby_block.json
+a682ae67f87a65d366a4af7dcbd2db99abba2524 data/necessariesmod/loot_table/blocks/ruby_ore.json
+9e7bc34514182d3e5c04b76b9dd576b56647973f data/necessariesmod/loot_table/blocks/steel_block.json

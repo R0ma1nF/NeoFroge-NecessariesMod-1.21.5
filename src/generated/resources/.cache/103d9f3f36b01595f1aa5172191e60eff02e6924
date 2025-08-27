@@ -1,0 +1,4 @@
+// 1.21.5	2025-08-27T23:39:24.3235048	Registries
+dd29c5413858f7905777799bcc3ea5725e2555bc data/necessariesmod/neoforge/biome_modifier/add_ruby_ore.json
+f03965cb40a7e42549670832cc2dbc0dab051612 data/necessariesmod/worldgen/configured_feature/ruby_ore.json
+684e4030c8096682506054782d4a0ca6c7409fdd data/necessariesmod/worldgen/placed_feature/ruby_ore_placed.json

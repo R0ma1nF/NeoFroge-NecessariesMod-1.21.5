@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "group": "copper_wire",
+  "ingredient": "minecraft:copper_ingot",
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:copper_wire"
+  }
+}

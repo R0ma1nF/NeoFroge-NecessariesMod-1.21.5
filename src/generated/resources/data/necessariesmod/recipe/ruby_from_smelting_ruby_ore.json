@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "ruby_from_ore",
+  "ingredient": "necessariesmod:ruby_ore",
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:ruby"
+  }
+}

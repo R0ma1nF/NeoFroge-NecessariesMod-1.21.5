@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "minecraft:diamond_block",
+    "S": "necessariesmod:steel_ingot"
+  },
+  "pattern": [
+    " D ",
+    "DSD",
+    "SSS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:drill_head"
+  }
+}

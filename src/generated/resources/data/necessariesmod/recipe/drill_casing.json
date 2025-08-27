@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "necessariesmod:iron_casing",
+    "P": "necessariesmod:iron_plate",
+    "S": "necessariesmod:steel_ingot"
+  },
+  "pattern": [
+    "SPS",
+    "SCS",
+    "SPS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:drill_casing"
+  }
+}

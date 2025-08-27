@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "necessariesmod:copper_coil",
+    "E": "necessariesmod:electronic_circuit",
+    "I": "minecraft:iron_block",
+    "P": "minecraft:piston",
+    "R": "minecraft:redstone",
+    "S": "necessariesmod:steel_ingot"
+  },
+  "pattern": [
+    "SIS",
+    "RPR",
+    "CEC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:drill_engine"
+  }
+}

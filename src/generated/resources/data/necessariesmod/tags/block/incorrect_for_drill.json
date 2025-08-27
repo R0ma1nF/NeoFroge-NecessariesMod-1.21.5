@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#necessariesmod:needs_drill"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_iron_tool"
+  ]
+}

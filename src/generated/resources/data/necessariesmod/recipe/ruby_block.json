@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "necessariesmod:ruby",
+    "necessariesmod:ruby",
+    "necessariesmod:ruby",
+    "necessariesmod:ruby",
+    "necessariesmod:ruby",
+    "necessariesmod:ruby",
+    "necessariesmod:ruby",
+    "necessariesmod:ruby",
+    "necessariesmod:ruby"
+  ],
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:ruby_block"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 250,
+  "experience": 0.5,
+  "group": "steel_ingot_from_blasting",
+  "ingredient": "necessariesmod:iron_plate",
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:steel_ingot"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "necessariesmod:copper_wire",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "CCC",
+    "CSC",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:copper_coil"
+  }
+}

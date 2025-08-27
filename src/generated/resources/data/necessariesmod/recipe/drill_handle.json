@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "L": "minecraft:leather",
+    "S": "necessariesmod:reinforced_stick"
+  },
+  "pattern": [
+    "LSL",
+    "LIL",
+    "LSL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:drill_handle"
+  }
+}
