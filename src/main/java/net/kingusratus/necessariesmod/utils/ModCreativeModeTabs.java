@@ -33,6 +33,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.OBSIDIAN_CHESTPLATE);
                         output.accept(ModItems.OBSIDIAN_LEGGINGS);
                         output.accept(ModItems.OBSIDIAN_BOOTS);
+                        output.accept(ModItems.COPPER_WIRE);
+                        output.accept(ModItems.COPPER_COIL);
+                        output.accept(ModItems.ELECTRONIC_CIRCUIT);
+                        output.accept(ModItems.IRON_PLATE);
+                        output.accept(ModItems.REINFORCED_STICK);
+                        output.accept(ModItems.IRON_CASING);
+                        output.accept(ModItems.DRILL_HEAD);
+                        output.accept(ModItems.DRILL_CASING);
+                        output.accept(ModItems.DRILL_ENGINE);
+                        output.accept(ModItems.DRILL_HANDLE);
+                        output.accept(ModItems.DRILL);
                     }).build());
 
     public static final Supplier<CreativeModeTab> NECESSARIESMOD_FOODS = CREATIVE_MODE_TAB.register("necessariesmod_foods",

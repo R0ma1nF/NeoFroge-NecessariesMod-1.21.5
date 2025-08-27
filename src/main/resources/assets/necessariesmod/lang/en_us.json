@@ -1,6 +1,17 @@
 {
   "item.necessariesmod.steel_ingot": "Steel Ingot",
   "item.necessariesmod.ruby": "Ruby",
+  "item.necessariesmod.copper_coil": "Copper Coil",
+  "item.necessariesmod.copper_wire": "Copper Wire",
+  "item.necessariesmod.electronic_circuit": "Electronic Circuit",
+  "item.necessariesmod.iron_casing": "Iron Casing",
+  "item.necessariesmod.iron_plate": "Iron Plate",
+  "item.necessariesmod.reinforced_stick": "Reinforced Stick",
+  "item.necessariesmod.drill_head": "Drill Head",
+  "item.necessariesmod.drill_casing": "Drill Casing",
+  "item.necessariesmod.drill_engine": "Drill Engine",
+  "item.necessariesmod.drill_handle": "Drill Handle",
+  "item.necessariesmod.drill": "Drill",
 
   "item.necessariesmod.dubious_food": "Dubious Food",
   "item.necessariesmod.cherry": "Cherry",

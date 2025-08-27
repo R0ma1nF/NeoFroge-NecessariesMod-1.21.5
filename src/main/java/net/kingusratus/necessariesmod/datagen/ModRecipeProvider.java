@@ -4,17 +4,19 @@ import net.kingusratus.necessariesmod.NecessariesMod;
 import net.kingusratus.necessariesmod.block.ModBlocks;
 import net.kingusratus.necessariesmod.item.ModItems;
 import net.kingusratus.necessariesmod.utils.ModTags;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -34,12 +36,15 @@ public class ModRecipeProvider extends RecipeProvider {
         buildShapedRecipes();
         buildShapelessRecipes();
         buildSmeltingRecipes();
+        buildBlastingRecipes();
         buildSmokingRecipes();
         buildCampfireRecipes();
+        buildStoneCuttingRecipes();
+        buildMiscRecipes();
     }
 
     // ================================
-    // RECETTES FAÇONNÉES (SHAPED)
+    // SHAPED RECIPES
     // ================================
 
     private void buildShapedRecipes() {
@@ -184,6 +189,125 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('S', Items.STICK)
                 .unlockedBy("has_fishes", has(ModTags.Items.FISHES))
                 .save(this.output);
+
+    }
+
+    private void buildMiscRecipes() {
+        shaped(RecipeCategory.MISC, ModItems.COPPER_COIL.get(), 1)
+                .pattern("CCC")
+                .pattern("CSC")
+                .pattern("CCC")
+                .define('C', ModItems.COPPER_WIRE.get())
+                .define('S', Items.STICK)
+                .unlockedBy("has_copper_wire", has(ModItems.COPPER_WIRE.get()))
+                .save(this.output);
+
+        shaped(RecipeCategory.MISC, ModItems.ELECTRONIC_CIRCUIT.get(), 1)
+                .pattern("WCW")
+                .pattern("RIR")
+                .pattern("WGW")
+                .define('W', ModItems.COPPER_WIRE.get())
+                .define('C', Items.GREEN_DYE)
+                .define('R', Items.REDSTONE)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Items.GOLD_INGOT)
+                .unlockedBy("has_copper_wire", has(ModItems.COPPER_WIRE.get()))
+                .unlockedBy("has_redstone", has(Items.REDSTONE))
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
+                .save(this.output);
+
+        shaped(RecipeCategory.MISC, ModItems.IRON_PLATE.get(), 1)
+                .pattern("III")
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .save(this.output);
+
+        shaped(RecipeCategory.MISC, ModItems.REINFORCED_STICK.get(), 1)
+                .pattern("ISI")
+                .pattern("ISI")
+                .pattern("ISI")
+                .define('I', Items.IRON_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(this.output);
+
+        shaped(RecipeCategory.MISC, ModItems.IRON_CASING.get(), 1)
+                .pattern("III")
+                .pattern("I I")
+                .pattern("III")
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .save(this.output);
+
+        shaped(RecipeCategory.MISC, ModItems.DRILL_HEAD.get(), 1)
+                .pattern(" D ")
+                .pattern("DSD")
+                .pattern("SSS")
+                .define('D', Blocks.DIAMOND_BLOCK)
+                .define('S', ModItems.STEEL_INGOT.get())
+                .unlockedBy("has_diamond_block", has(Blocks.DIAMOND_BLOCK))
+                .unlockedBy("has_steel_ingot", has(ModItems.STEEL_INGOT.get()))
+                .save(this.output);
+
+        shaped(RecipeCategory.MISC, ModItems.DRILL_CASING.get(), 1)
+                .pattern("SPS")
+                .pattern("SCS")
+                .pattern("SPS")
+                .define('S', ModItems.STEEL_INGOT.get())
+                .define('P', ModItems.IRON_PLATE.get())
+                .define('C', ModItems.IRON_CASING.get())
+                .unlockedBy("has_steel_ingot", has(ModItems.STEEL_INGOT.get()))
+                .unlockedBy("has_iron_plate", has(ModItems.IRON_PLATE.get()))
+                .unlockedBy("has_iron_casing", has(ModItems.IRON_CASING.get()))
+                .save(this.output);
+
+        shaped(RecipeCategory.MISC, ModItems.DRILL_ENGINE.get(), 1)
+                .pattern("SIS")
+                .pattern("RPR")
+                .pattern("CEC")
+                .define('S', ModItems.STEEL_INGOT.get())
+                .define('I', Blocks.IRON_BLOCK)
+                .define('R', Items.REDSTONE)
+                .define('P', Blocks.PISTON)
+                .define('C', ModItems.COPPER_COIL.get())
+                .define('E', ModItems.ELECTRONIC_CIRCUIT.get())
+                .unlockedBy("has_steel_ingot", has(ModItems.STEEL_INGOT.get()))
+                .unlockedBy("has_iron_block", has(Blocks.IRON_BLOCK))
+                .unlockedBy("has_redstone", has(Items.REDSTONE))
+                .unlockedBy("has_piston", has(Blocks.PISTON))
+                .unlockedBy("has_copper_coil", has(ModItems.COPPER_COIL.get()))
+                .unlockedBy("has_electronic_circuit", has(ModItems.ELECTRONIC_CIRCUIT.get()))
+                .save(this.output);
+
+        shaped(RecipeCategory.MISC, ModItems.DRILL_HANDLE.get(), 1)
+                .pattern("LSL")
+                .pattern("LIL")
+                .pattern("LSL")
+                .define('L', Items.LEATHER)
+                .define('S', ModItems.REINFORCED_STICK.get())
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy("has_leather", has(Items.LEATHER))
+                .unlockedBy("has_reinforced_stick", has(ModItems.REINFORCED_STICK.get()))
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .save(this.output);
+
+        shaped(RecipeCategory.MISC, ModItems.DRILL.get(), 1)
+                .pattern("SHS")
+                .pattern("DCD")
+                .pattern("SES")
+                .define('H', ModItems.DRILL_HEAD.get())
+                .define('S', ModItems.STEEL_INGOT.get())
+                .define('D', ModItems.DRILL_HANDLE.get())
+                .define('C', ModItems.DRILL_CASING.get())
+                .define('E', ModItems.DRILL_ENGINE.get())
+                .unlockedBy("has_drill_head", has(ModItems.DRILL_HEAD.get()))
+                .unlockedBy("has_steel_ingot", has(ModItems.STEEL_INGOT.get()))
+                .unlockedBy("has_drill_handle", has(ModItems.DRILL_HANDLE.get()))
+                .unlockedBy("has_drill_casing", has(ModItems.DRILL_CASING.get()))
+                .unlockedBy("has_drill_engine", has(ModItems.DRILL_ENGINE.get()))
+                .save(this.output);
     }
 
     private void buildArmorRecipes() {
@@ -249,7 +373,7 @@ public class ModRecipeProvider extends RecipeProvider {
     }
 
     // ================================
-    // RECETTES SANS FORME (SHAPELESS)
+    // SHAPELESS RECIPES
     // ================================
 
     private void buildShapelessRecipes() {
@@ -294,6 +418,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_egg", has(ItemTags.EGGS))
                 .save(this.output);
 
+        // orange, cherry, banana and coconut pies
         shapeless(RecipeCategory.FOOD, ModItems.CHERRY_PIE, 1)
                 .requires(ModItems.CHERRY.get())
                 .requires(Items.SUGAR)
@@ -423,10 +548,31 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(Items.NETHERITE_SCRAP)
                 .unlockedBy("has_netherite_scrap", has(Items.NETHERITE_SCRAP))
                 .save(this.output);
+
+        shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RUBY_BLOCK)
+                .requires(ModItems.RUBY.get(), 9)
+                .unlockedBy("has_ruby", has(ModItems.RUBY.get()))
+                .save(this.output);
+
+        shapeless(RecipeCategory.MISC, ModItems.RUBY.get(), 9)
+                .requires(ModBlocks.RUBY_BLOCK)
+                .unlockedBy("has_ruby_block", has(ModBlocks.RUBY_BLOCK))
+                .save(this.output);
+
+        shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STEEL_BLOCK)
+                .requires(ModItems.STEEL_INGOT.get(), 9)
+                .unlockedBy("has_steel_ingot", has(ModItems.STEEL_INGOT.get()))
+                .save(this.output);
+
+        shapeless(RecipeCategory.MISC, ModItems.STEEL_INGOT.get(), 9)
+                .requires(ModBlocks.STEEL_BLOCK)
+                .unlockedBy("has_steel_block", has(ModBlocks.STEEL_BLOCK))
+                .save(this.output);
+
     }
 
     // ================================
-    // RECETTES DE CUISSON
+    // SMELTING, SMOKING, BLASTING & CAMPFIRE
     // ================================
 
     private void buildSmeltingRecipes() {
@@ -441,23 +587,58 @@ public class ModRecipeProvider extends RecipeProvider {
 
         oreSmelting(this.output, List.of(Items.TROPICAL_FISH), RecipeCategory.FOOD,
                    ModItems.COOKED_TROPICAL_FISH.get(), COOKING_EXPERIENCE, COOKING_TIME, "cooked_tropical_fish");
+        oreSmelting(
+                this.output,
+                List.of(ModBlocks.RUBY_ORE.get()),
+                RecipeCategory.MISC,
+                ModItems.RUBY.get(),
+                1f,
+                200,
+                "ruby_from_ore"
+        );
+
+        oreSmelting(
+                this.output,
+                List.of(ModBlocks.DEEPSLATE_RUBY_ORE.get()),
+                RecipeCategory.MISC,
+                ModItems.RUBY.get(),
+                1f,
+                200,
+                "ruby_from_ore"
+        );
+    }
+
+    private void buildStoneCuttingRecipes() {
+        oreStonecutting(this.output, Items.COPPER_INGOT, RecipeCategory.MISC,
+                new ItemStack(ModItems.COPPER_WIRE.get(), 3), "copper_wire");
     }
 
     private void buildSmokingRecipes() {
         oreSmoking(this.output, List.of(Items.MILK_BUCKET), RecipeCategory.FOOD,
-                  new ItemStack(ModItems.CHEESE.get(), 8), COOKING_EXPERIENCE, COOKING_TIME, "cheese");
+                new ItemStack(ModItems.CHEESE.get(), 8), COOKING_EXPERIENCE, COOKING_TIME, "cheese");
 
         oreSmoking(this.output, List.of(Items.EGG, Items.BLUE_EGG, Items.BROWN_EGG),
-                  RecipeCategory.FOOD, ModItems.OMELETTE.get(), COOKING_EXPERIENCE, COOKING_TIME, "omelette");
+                RecipeCategory.FOOD, ModItems.OMELETTE.get(), COOKING_EXPERIENCE, COOKING_TIME, "omelette");
 
         oreSmoking(this.output, List.of(ModItems.CHEESE.get()), RecipeCategory.FOOD,
-                  ModItems.SMOKED_CHEESE.get(), COOKING_EXPERIENCE, COOKING_TIME, "smoked_cheese");
+                ModItems.SMOKED_CHEESE.get(), COOKING_EXPERIENCE, COOKING_TIME, "smoked_cheese");
 
         oreSmoking(this.output, List.of(Items.ROTTEN_FLESH), RecipeCategory.FOOD,
-                  ModItems.ZOMBIE_JERKY.get(), COOKING_EXPERIENCE, COOKING_TIME, "zombie_jerky");
+                ModItems.ZOMBIE_JERKY.get(), COOKING_EXPERIENCE, COOKING_TIME, "zombie_jerky");
 
         oreSmoking(this.output, List.of(Items.TROPICAL_FISH), RecipeCategory.FOOD,
-                  ModItems.COOKED_TROPICAL_FISH.get(), COOKING_EXPERIENCE, COOKING_TIME, "cooked_tropical_fish");
+                ModItems.COOKED_TROPICAL_FISH.get(), COOKING_EXPERIENCE, COOKING_TIME, "cooked_tropical_fish");
+    }
+
+    private void buildBlastingRecipes() {
+        oreBlasting(this.output, List.of(ModItems.IRON_PLATE.get()), RecipeCategory.MISC,
+                ModItems.STEEL_INGOT.get(), 0.50f, 250, "steel_ingot_from_blasting");
+
+        oreBlasting(this.output, List.of(ModBlocks.RUBY_ORE.get()), RecipeCategory.MISC,
+                ModItems.RUBY.get(), 1f, 100, "ruby_from_ore");
+
+        oreBlasting(this.output, List.of(ModBlocks.DEEPSLATE_RUBY_ORE.get()), RecipeCategory.MISC,
+                ModItems.RUBY.get(), 1f, 100, "ruby_from_ore");
     }
 
     private void buildCampfireRecipes() {
@@ -475,11 +656,19 @@ public class ModRecipeProvider extends RecipeProvider {
 
         oreCampfireCooking(this.output, List.of(Items.TROPICAL_FISH), RecipeCategory.FOOD,
                           ModItems.COOKED_TROPICAL_FISH.get(), COOKING_EXPERIENCE, COOKING_TIME, "cooked_tropical_fish");
+
     }
 
     // ================================
     // MÉTHODES UTILITAIRES
     // ================================
+
+    protected void oreStonecutting(RecipeOutput recipeOutput, ItemLike pIngredient, RecipeCategory pCategory, ItemLike pResult, String pGroup) {
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(pIngredient), pCategory, pResult)
+                .group(pGroup)
+                .unlockedBy(getHasName(pIngredient), has(pIngredient))
+                .save(recipeOutput, NecessariesMod.MOD_ID + ":" + getItemName(pResult) + "_from_stonecutting_" + getItemName(pIngredient));
+    }
 
     protected void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                float pExperience, int pCookingTIme, String pGroup) {
@@ -511,6 +700,13 @@ public class ModRecipeProvider extends RecipeProvider {
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer, factory).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(recipeOutput, NecessariesMod.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
+    }
+
+    protected void oreStonecutting(RecipeOutput recipeOutput, ItemLike pIngredient, RecipeCategory pCategory, ItemStack pResult, String pGroup) {
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(pIngredient), pCategory, pResult.getItem())
+                .group(pGroup)
+                .unlockedBy(getHasName(pIngredient), has(pIngredient))
+                .save(recipeOutput, NecessariesMod.MOD_ID + ":" + getItemName(pResult.getItem()) + "_from_stonecutting_" + getItemName(pIngredient));
     }
 
     protected void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemStack pResult,

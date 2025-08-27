@@ -53,6 +53,17 @@ public class ModModelProvider extends ModelProvider {
     private void registerItemsModels(ItemModelGenerators itemModels, BlockModelGenerators blockModels) {
         itemModels.generateFlatItem(ModItems.STEEL_INGOT.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.RUBY.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.COPPER_WIRE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.COPPER_COIL.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.ELECTRONIC_CIRCUIT.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.IRON_PLATE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.REINFORCED_STICK.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.IRON_CASING.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.DRILL_HEAD.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.DRILL_CASING.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.DRILL_ENGINE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.DRILL_HANDLE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.DRILL.get(), ModelTemplates.FLAT_ITEM);
     }
 
     private void registerFoodModels(ItemModelGenerators itemModels, BlockModelGenerators blockModels) {
