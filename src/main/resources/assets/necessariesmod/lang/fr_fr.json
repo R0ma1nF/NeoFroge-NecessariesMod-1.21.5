@@ -1,11 +1,17 @@
 {
   "item.necessariesmod.steel_ingot": "Lingot d'acier",
   "item.necessariesmod.ruby": "Rubis",
-
-  "block.necessariesmod.steel_block": "Bloc d'acier",
-  "block.necessariesmod.ruby_ore": "Minerai de rubis",
-  "block.necessariesmod.deepslate_ruby_ore": "Minerai de rubis en schiste profond",
-  "block.necessariesmod.ruby_block": "Bloc de rubis",
+  "item.necessariesmod.copper_coil": "Bobine de cuivre",
+  "item.necessariesmod.copper_wire": "Fil de cuivre",
+  "item.necessariesmod.electronic_circuit": "Circuit électronique",
+  "item.necessariesmod.iron_casing": "Chassis en fer",
+  "item.necessariesmod.iron_plate": "Plaque de fer",
+  "item.necessariesmod.reinforced_stick": "Bâton renforcé",
+  "item.necessariesmod.drill_head": "Tête de foreuse",
+  "item.necessariesmod.drill_casing": "Châssis de foreuse",
+  "item.necessariesmod.drill_engine": "Moteur de foreuse",
+  "item.necessariesmod.drill_handle": "Poignée de foreuse",
+  "item.necessariesmod.drill": "Foreuse",
 
   "item.necessariesmod.dubious_food": "Nourriture douteuse",
   "item.necessariesmod.cherry": "Cerise",
@@ -73,6 +79,11 @@
   "item.necessariesmod.obsidian_leggings": "Jambières d'obsidienne",
   "item.necessariesmod.obsidian_boots": "Bottes d'obsidienne",
 
+  "block.necessariesmod.steel_block": "Bloc d'acier",
+  "block.necessariesmod.ruby_ore": "Minerai de rubis",
+  "block.necessariesmod.deepslate_ruby_ore": "Minerai de rubis en schiste profond",
+  "block.necessariesmod.ruby_block": "Bloc de rubis",
+
   "effect.necessariesmod.burning": "Brûlant",
   "effect.necessariesmod.lightning": "Foudre",
   "effect.necessariesmod.confusing": "Confus",
@@ -81,5 +92,4 @@
 
   "creativetab.necessariesmod.food_tab": "Necessaries Mod Nourritures",
   "creativetab.necessariesmod.item_tab": "Necessaries Mod"
-
 }

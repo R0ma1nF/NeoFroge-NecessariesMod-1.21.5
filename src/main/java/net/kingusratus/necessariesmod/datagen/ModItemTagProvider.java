@@ -38,6 +38,9 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.OBSIDIAN)
                 .add(Items.CRYING_OBSIDIAN);
 
+        tag(ModTags.Items.REPAIRS_DRILL)
+                .add(ModItems.DRILL.get());
+
         tag(ItemTags.SWORDS)
                 .add(ModItems.FISH_SWORD.get());
 

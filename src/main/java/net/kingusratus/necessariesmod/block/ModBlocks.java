@@ -36,7 +36,7 @@ public class ModBlocks {
                     .strength(3.0F, 3.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> DEEPSLATE_RUBY_ORE = registerBlock("deepslate_ruby_ore",
             (properties) -> new DropExperienceBlock(UniformInt.of(5, 10), properties
-                    .strength(3.0F, 3.0F).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+                    .strength(4.5F, 3.0F).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
     public static final DeferredBlock<Block> RUBY_BLOCK = registerBlock("ruby_block",
             (properties) -> new Block(properties
                     .strength(5.0F, 6.0F).instrument(NoteBlockInstrument.BIT).requiresCorrectToolForDrops().sound(SoundType.METAL)));

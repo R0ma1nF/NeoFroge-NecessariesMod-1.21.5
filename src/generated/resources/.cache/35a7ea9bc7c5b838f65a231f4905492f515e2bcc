@@ -1,2 +1,6 @@
-// 1.21.5	2025-08-23T23:29:36.0655766	Tags for minecraft:block mod id necessariesmod
+// 1.21.5	2025-08-27T17:54:02.954938	Tags for minecraft:block mod id necessariesmod
 d105902539f7d686dce6dbc6998daf06128846a7 data/minecraft/tags/block/beacon_base_blocks.json
+278e12e590bdb6581789af431e69530ab0ca6b6b data/minecraft/tags/block/mineable/pickaxe.json
+f250f28ec4e6ee81287c789f8cf71b233ca48944 data/minecraft/tags/block/needs_iron_tool.json
+4d09724c6a68a014b78f498319cca88fd2d21fb7 data/necessariesmod/tags/block/incorrect_for_drill.json
+32b13946c4cd1f944b029659ccce5fcb2adad4ff data/necessariesmod/tags/block/needs_drill.json

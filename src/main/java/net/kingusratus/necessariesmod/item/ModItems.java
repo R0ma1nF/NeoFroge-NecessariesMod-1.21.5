@@ -3,10 +3,12 @@ package net.kingusratus.necessariesmod.item;
 import net.kingusratus.necessariesmod.NecessariesMod;
 import net.kingusratus.necessariesmod.food.ModConsumables;
 import net.kingusratus.necessariesmod.food.ModFoodProperties;
+import net.kingusratus.necessariesmod.item.custom.DrillItem;
 import net.kingusratus.necessariesmod.item.custom.CactusArmorItem;
 import net.kingusratus.necessariesmod.item.custom.ObsidianArmorItem;
 import net.kingusratus.necessariesmod.item.custom.VoidCookieItem;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.util.Unit;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Rarity;
@@ -20,6 +22,7 @@ public class ModItems {
     // The DeferredRegister for items, which will hold all the items we want to register
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(NecessariesMod.MOD_ID);
 
+
     /***************************************************************************************
      * MISC ITEMS
      ***************************************************************************************/
@@ -27,6 +30,32 @@ public class ModItems {
             Item::new);
     public static final DeferredItem<Item> RUBY = ITEMS.registerItem("ruby",
             Item::new);
+    public static final DeferredItem<Item> COPPER_WIRE = ITEMS.registerItem("copper_wire",
+            Item::new);
+    public static final DeferredItem<Item> COPPER_COIL = ITEMS.registerItem("copper_coil",
+            Item::new);
+    public static final DeferredItem<Item> ELECTRONIC_CIRCUIT = ITEMS.registerItem("electronic_circuit",
+            Item::new);
+    public static final DeferredItem<Item> IRON_PLATE = ITEMS.registerItem("iron_plate",
+            Item::new);
+    public static final DeferredItem<Item> REINFORCED_STICK = ITEMS.registerItem("reinforced_stick",
+            Item::new);
+    public static final DeferredItem<Item> IRON_CASING = ITEMS.registerItem("iron_casing",
+            Item::new);
+    public static final DeferredItem<Item> DRILL_HEAD = ITEMS.registerItem("drill_head",
+            Item::new);
+    public static final DeferredItem<Item> DRILL_CASING = ITEMS.registerItem("drill_casing",
+            Item::new);
+    public static final DeferredItem<Item> DRILL_ENGINE = ITEMS.registerItem("drill_engine",
+            Item::new);
+    public static final DeferredItem<Item> DRILL_HANDLE = ITEMS.registerItem("drill_handle",
+            Item::new);
+    public static final DeferredItem<Item> DRILL = ITEMS.registerItem("drill",
+            (properties) -> new DrillItem(properties
+                    .pickaxe(ModToolTiers.DRILL, 8.0F, -3.9F)
+                    .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
+            ));
+
 
     /***************************************************************************************
      * FOOD ITEMS
@@ -117,6 +146,7 @@ public class ModItems {
             (properties) -> new Item(properties.rarity(Rarity.RARE).food(ModFoodProperties.THE_THING).component(DataComponents.CONSUMABLE, ModConsumables.THE_THING)));
     public static final DeferredItem<Item> NETHERITE_STEAK = ITEMS.registerItem("netherite_steak",
             (properties) -> new Item(properties.rarity(Rarity.RARE).food(ModFoodProperties.NETHERITE_STEAK).component(DataComponents.CONSUMABLE, ModConsumables.NETHERITE_STEAK)));
+
 
     /***************************************************************************************
      * TOOLS
