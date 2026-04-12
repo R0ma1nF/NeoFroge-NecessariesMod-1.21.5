@@ -44,6 +44,34 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.SWORDS)
                 .add(ModItems.FISH_SWORD.get());
 
+        tag(ModTags.Items.INFUSABLE)
+                .add(ModItems.BIG_WATER_BOTTLE.get())
+                .add(ModItems.BIG_POTION.get());
+
+        tag(ModTags.Items.INFUSION_INGREDIENT)
+                .add(Items.BLAZE_POWDER)
+                .add(Items.MAGMA_CREAM)
+                .add(Items.SUGAR)
+                .add(Items.RABBIT_FOOT)
+                .add(Items.SLIME_BLOCK)
+                .add(Items.COBWEB)
+                .add(Items.STONE)
+                .add(Items.GLISTERING_MELON_SLICE)
+                .add(Items.GOLDEN_CARROT)
+                .add(Items.PUFFERFISH)
+                .add(Items.SPIDER_EYE)
+                .add(Items.FERMENTED_SPIDER_EYE)
+                .add(Items.PHANTOM_MEMBRANE)
+                .add(Items.BREEZE_ROD)
+                .add(Items.MAGMA_BLOCK)
+                .add(Items.GLOW_LICHEN)
+                .add(Items.GLOW_BERRIES)
+                .add(Items.GLOW_INK_SAC)
+                .add(Items.LIGHTNING_ROD)
+                .add(Items.GLOWSTONE_DUST)
+                .add(Items.IRON_PICKAXE)
+                .add(Items.REDSTONE);
+
         tag(ModTags.Items.TRASH)
                 .add(Items.STICK)
                 .add(Items.FEATHER)

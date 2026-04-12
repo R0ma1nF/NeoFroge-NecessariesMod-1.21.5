@@ -3,10 +3,14 @@ package net.kingusratus.necessariesmod.datagen;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import net.kingusratus.necessariesmod.item.ModItems;
+import net.minecraft.client.color.item.ItemTintSource;
+import net.minecraft.client.color.item.Potion;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.blockstates.PropertyDispatch;
+import net.minecraft.client.data.models.model.ItemModelUtils;
 import net.minecraft.client.data.models.model.ModelLocationUtils;
 import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
@@ -49,6 +53,10 @@ public class ModModels {
         itemModels.generateFlatItem(item, ModelTemplates.FLAT_ITEM);
     }
 
+    public static void createBigPotionModels(Item item, ItemModelGenerators itemModels) {
+        ResourceLocation resourcelocation = itemModels.generateLayeredItem(item, ResourceLocation.parse("necessariesmod:item/bottle_content"), ModelLocationUtils.getModelLocation(ModItems.BIG_BOTTLE.get()));
+        itemModels.itemModelOutput.accept(item, ItemModelUtils.tintedModel(resourcelocation, new ItemTintSource[]{new Potion()}));
+    }
 
     /***************************************************************************************
      * HELPER FUNCTIONS

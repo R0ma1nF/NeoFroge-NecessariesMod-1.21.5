@@ -21,6 +21,10 @@ public class ModPotions {
     public static final Holder<Potion> LONG_BURNING;
     public static final Holder<Potion> STRONG_BURNING;
     public static final Holder<Potion> LIGHTNING;
+    public static final Holder<Potion> HASTE;
+    public static final Holder<Potion> LONG_HASTE;
+    public static final Holder<Potion> STRONG_HASTE;
+    public static final Holder<Potion> LONG_STRONG_HASTE;
 
     static {
         GLOWING = registerPotion("glowing", "glowing", new MobEffectInstance[]{new MobEffectInstance(MobEffects.GLOWING, 3600)});
@@ -29,6 +33,10 @@ public class ModPotions {
         LONG_BURNING = registerPotion("long_burning","burning", new MobEffectInstance[]{new MobEffectInstance(ModEffects.BURNING, 1800)});
         STRONG_BURNING = registerPotion("strong_burning","burning", new MobEffectInstance[]{new MobEffectInstance(ModEffects.BURNING, 432, 1)});
         LIGHTNING = registerPotion("lightning", "lightning", new MobEffectInstance[]{new MobEffectInstance(ModEffects.LIGHTNING, 1)});
+        HASTE = registerPotion("haste", "haste", new MobEffectInstance[]{new MobEffectInstance(MobEffects.HASTE, 3600)});
+        LONG_HASTE = registerPotion("long_haste", "haste", new MobEffectInstance[]{new MobEffectInstance(MobEffects.HASTE, 9600)});
+        STRONG_HASTE = registerPotion("strong_haste", "haste", new MobEffectInstance[]{new MobEffectInstance(MobEffects.HASTE, 432, 1)});
+        LONG_STRONG_HASTE = registerPotion("long_strong_haste", "haste", new MobEffectInstance[]{new MobEffectInstance(MobEffects.HASTE, 9600, 1)});
     }
 
 

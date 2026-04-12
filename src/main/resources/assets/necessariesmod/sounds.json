@@ -1,0 +1,8 @@
+{
+  "suspicious_key_use": {
+    "subtitle": "sounds.necessariesmod.suspicious_key_use",
+    "sounds": [
+      "necessariesmod:suspicious_key_use"
+    ]
+  }
+}

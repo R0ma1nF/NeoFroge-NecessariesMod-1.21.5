@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": "necessariesmod:end_glass_shard",
+    "S": "minecraft:shulker_shell"
+  },
+  "pattern": [
+    "GSG",
+    "G G",
+    "GGG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "necessariesmod:big_bottle"
+  }
+}

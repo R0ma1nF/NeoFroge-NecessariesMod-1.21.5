@@ -308,6 +308,30 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_drill_casing", has(ModItems.DRILL_CASING.get()))
                 .unlockedBy("has_drill_engine", has(ModItems.DRILL_ENGINE.get()))
                 .save(this.output);
+
+        shaped(RecipeCategory.MISC, ModBlocks.END_INFUSER)
+                .pattern("SDS")
+                .pattern("RGR")
+                .pattern("SCS")
+                .define('S', ModItems.STEEL_INGOT.get())
+                .define('D', Items.DIAMOND_BLOCK)
+                .define('R', ModItems.REINFORCED_STICK.get())
+                .define('G', ModItems.END_GLASS_SHARD)
+                .define('C', Items.CRYING_OBSIDIAN)
+                .unlockedBy("has_steel_ingot", has(ModItems.STEEL_INGOT.get()))
+                .unlockedBy("has_diamond_block", has(Items.DIAMOND_BLOCK))
+                .unlockedBy("has_end_glass_shard", has(ModItems.END_GLASS_SHARD.get()))
+                .save(this.output);
+
+        shaped(RecipeCategory.MISC, ModItems.BIG_BOTTLE.get())
+                .pattern("GSG")
+                .pattern("G G")
+                .pattern("GGG")
+                .define('G', ModItems.END_GLASS_SHARD)
+                .define('S', Items.SHULKER_SHELL)
+                .unlockedBy("has_shulker_shell", has(Items.SHULKER_SHELL))
+                .unlockedBy("has_end_glass_shard", has(ModItems.END_GLASS_SHARD.get()))
+                .save(this.output);
     }
 
     private void buildArmorRecipes() {
@@ -569,6 +593,19 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_steel_block", has(ModBlocks.STEEL_BLOCK))
                 .save(this.output);
 
+        shapeless(RecipeCategory.MISC, Items.ECHO_SHARD, 8)
+                .requires(Items.AMETHYST_SHARD, 8)
+                .requires(Items.SCULK, 1)
+                .unlockedBy("has_sculk", has(Items.SCULK))
+                .unlockedBy("has_echo_shard", has(Items.ECHO_SHARD))
+                .save(this.output);
+
+        shapeless(RecipeCategory.MISC, ModItems.SUSPICIOUS_KEY.get())
+                .requires(Items.DIAMOND, 1)
+                .requires(Items.GOLD_INGOT, 1)
+                .unlockedBy("has_key", has(ModItems.SUSPICIOUS_KEY.get()))
+                .save(this.output);
+
     }
 
     // ================================
@@ -605,6 +642,16 @@ public class ModRecipeProvider extends RecipeProvider {
                 1f,
                 200,
                 "ruby_from_ore"
+        );
+
+        oreSmelting(
+                this.output,
+                List.of(Items.END_STONE),
+                RecipeCategory.MISC,
+                ModItems.END_GLASS_SHARD.get(),
+                1f,
+                200,
+                "end_shard_from_stone"
         );
     }
 

@@ -46,8 +46,13 @@ public class ModModelProvider extends ModelProvider {
     }
 
     @Override
+    protected Stream<? extends Holder<Block>> getKnownBlocks() {
+        return ModBlocks.BLOCKS.getEntries().stream().filter(x -> !x.is(ModBlocks.END_INFUSER) );
+    }
+
+    @Override
     protected Stream<? extends Holder<Item>> getKnownItems() {
-        return ModItems.ITEMS.getEntries().stream();
+        return ModItems.ITEMS.getEntries().stream().filter(x -> x.get() != ModBlocks.END_INFUSER.asItem());
     }
 
     private void registerItemsModels(ItemModelGenerators itemModels, BlockModelGenerators blockModels) {
@@ -63,7 +68,10 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.DRILL_CASING.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.DRILL_ENGINE.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.DRILL_HANDLE.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.DRILL.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.DRILL.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.END_GLASS_SHARD.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.BIG_BOTTLE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.SUSPICIOUS_KEY.get(), ModelTemplates.FLAT_ITEM);
     }
 
     private void registerFoodModels(ItemModelGenerators itemModels, BlockModelGenerators blockModels) {
@@ -112,6 +120,9 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.NETHERITE_STEAK.get(), ModelTemplates.FLAT_ITEM);
 
         ModModels.createCakeModels(ModBlocks.ENDCAKE_BLOCK.get(), ModBlocks.ENDCAKE_BLOCK.asItem(), blockModels, itemModels);
+
+        ModModels.createBigPotionModels(ModItems.BIG_POTION.get(), itemModels);
+        ModModels.createBigPotionModels(ModItems.BIG_WATER_BOTTLE.get(), itemModels);
     }
 
     private void registerToolsModels(ItemModelGenerators itemModels, BlockModelGenerators blockModels) {

@@ -3,14 +3,12 @@ package net.kingusratus.necessariesmod.block;
 
 import net.kingusratus.necessariesmod.NecessariesMod;
 import net.kingusratus.necessariesmod.block.custom.EndCakeBlock;
+import net.kingusratus.necessariesmod.block.custom.EndInfuserBlock;
 import net.kingusratus.necessariesmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.neoforged.bus.api.IEventBus;
@@ -42,6 +40,9 @@ public class ModBlocks {
                     .strength(5.0F, 6.0F).instrument(NoteBlockInstrument.BIT).requiresCorrectToolForDrops().sound(SoundType.METAL)));
     public static final DeferredBlock<Block> ENDCAKE_BLOCK = registerBlock("endcake",
             (properties) -> new EndCakeBlock(Blocks.CAKE.properties()));
+    public static final DeferredBlock<Block> END_INFUSER = registerBlock("end_infuser",
+            (properties) -> new EndInfuserBlock(properties.noOcclusion()));
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
         DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);

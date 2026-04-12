@@ -12,6 +12,7 @@
   "item.necessariesmod.drill_engine": "Drill Engine",
   "item.necessariesmod.drill_handle": "Drill Handle",
   "item.necessariesmod.drill": "Drill",
+  "item.necessariesmod.suspicious_key": "Suspicious Key",
 
   "item.necessariesmod.dubious_food": "Dubious Food",
   "item.necessariesmod.cherry": "Cherry",
@@ -67,9 +68,22 @@
   "item.minecraft.potion.effect.lightning": "Potion of Lightning",
   "item.minecraft.splash_potion.effect.lightning": "Splash Potion of Lightning",
   "item.minecraft.lingering_potion.effect.lightning": "Lingering Potion of Lightning",
+  "item.minecraft.tipped_arrow.effect.burning": "Arrow of Burning",
+  "item.minecraft.tipped_arrow.effect.glowing": "Arrow of Glowing",
+  "item.minecraft.tipped_arrow.effect.lightning": "Arrow of Lightning",
+  "item.minecraft.potion.effect.haste": "Potion of Haste",
+  "item.minecraft.splash_potion.effect.haste": "Splash Potion of Haste",
+  "item.minecraft.lingering_potion.effect.haste": "Lingering Potion of Haste",
+  "item.minecraft.tipped_arrow.effect.haste": "Arrow of Haste",
+
+
+  "block.necessariesmod.end_infuser": "End Infuser",
+  "item.necessariesmod.end_glass_shard": "End Glass Shard",
+  "item.necessariesmod.big_bottle": "Big Bottle",
+  "item.necessariesmod.big_water_bottle": "Big Water Bottle",
+  "item.necessariesmod.big_potion": "Big Potion",
 
   "item.necessariesmod.fish_sword": "Fish Sword",
-
   "item.necessariesmod.cactus_helmet": "Cactus Helmet",
   "item.necessariesmod.cactus_chestplate": "Cactus Chestplate",
   "item.necessariesmod.cactus_leggings": "Cactus Leggings",
@@ -89,6 +103,8 @@
   "effect.necessariesmod.confusing": "Confusing",
   "effect.necessariesmod.confusing.message": "You feel confused!",
   "effect.necessariesmod.prickly": "Prickly",
+
+  "item.necessariesmod.suspicious_key.desc": "You feel a strange energy emanating from this key... Maybe it belongs to someone?",
 
   "creativetab.necessariesmod.food_tab": "Necessaries Mod Foods",
   "creativetab.necessariesmod.item_tab": "Necessaries Mod"

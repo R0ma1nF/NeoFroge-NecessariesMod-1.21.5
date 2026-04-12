@@ -25,7 +25,8 @@ public class ModTags {
         public static final TagKey<Item> REPAIRS_CACTUS_ARMOR = createTag("repairs_cactus_armor");
         public static final TagKey<Item> REPAIRS_OBSIDIAN_ARMOR = createTag("repairs_obsidian_armor");
         public static final TagKey<Item> REPAIRS_DRILL = createTag("repairs_drill");
-
+        public static final TagKey<Item> INFUSABLE = createTag("infusable");
+        public static final TagKey<Item> INFUSION_INGREDIENT = createTag("infusion_ingredient");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(NecessariesMod.MOD_ID, name));

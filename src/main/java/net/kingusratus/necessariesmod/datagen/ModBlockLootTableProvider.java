@@ -32,6 +32,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RUBY_BLOCK.get());
         dropSelf(ModBlocks.STEEL_BLOCK.get());
         dropSelf(ModBlocks.ENDCAKE_BLOCK.get());
+        dropSelf(ModBlocks.END_INFUSER.get());
 
         add(ModBlocks.RUBY_ORE.get(), block -> createOreDrop(block, ModItems.RUBY.get()));
         add(ModBlocks.DEEPSLATE_RUBY_ORE.get(), block -> createOreDrop(block, ModItems.RUBY.get()));

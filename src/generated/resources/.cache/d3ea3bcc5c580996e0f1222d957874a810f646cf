@@ -1,6 +1,8 @@
-// 1.21.5	2025-08-27T17:54:02.9564664	Tags for minecraft:item mod id necessariesmod
+// 1.21.5	2026-04-11T23:39:52.1878892	Tags for minecraft:item mod id necessariesmod
 343f6ee8fc6d9f0f15356ad05c44df6329aa2f41 data/minecraft/tags/item/swords.json
 a48dd92da4536829bee1eeeb8abede36f3b013bc data/necessariesmod/tags/item/fishes.json
+63d8a9ffd833348ffb23b6f1ce62c542ab16acff data/necessariesmod/tags/item/infusable.json
+65e2fd77a9914067bd6de26b12a04ecb3cd0005b data/necessariesmod/tags/item/infusion_ingredient.json
 cd4460e5e3a22d6e78dd48c3af239f5ccc03fc9c data/necessariesmod/tags/item/meats.json
 40fc28555ba86485c2fdf3bc327bb05602bd7cb5 data/necessariesmod/tags/item/repairs_cactus_armor.json
 28ae53af5ecb5699c419af172a8f8f64247e2193 data/necessariesmod/tags/item/repairs_drill.json

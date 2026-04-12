@@ -1,12 +1,22 @@
 package net.kingusratus.necessariesmod;
 
+import net.kingusratus.necessariesmod.screen.ModMenuTypes;
+import net.kingusratus.necessariesmod.screen.custom.EndInfuserScreen;
 import net.kingusratus.necessariesmod.block.ModBlocks;
+import net.kingusratus.necessariesmod.block.entity.ModBlockEntities;
+import net.kingusratus.necessariesmod.block.entity.renderer.EndInfuserBlockEntityRenderer;
+import net.kingusratus.necessariesmod.component.ModDataComponents;
 import net.kingusratus.necessariesmod.effect.mob_effect.ModEffects;
 import net.kingusratus.necessariesmod.item.ModItems;
 import net.kingusratus.necessariesmod.loot.ModLootModifiers;
 import net.kingusratus.necessariesmod.potion.ModPotions;
+import net.kingusratus.necessariesmod.sound.ModSounds;
 import net.kingusratus.necessariesmod.utils.ModCreativeModeTabs;
-import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -46,10 +56,16 @@ public class NecessariesMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModSounds.register(modEventBus);
+
+        ModDataComponents.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -68,5 +84,24 @@ public class NecessariesMod {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
 
+    }
+
+    @EventBusSubscriber(modid = MOD_ID, value = Dist.CLIENT)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+
+        }
+
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(ModBlockEntities.END_INFUSER_BE.get(), EndInfuserBlockEntityRenderer::new);
+        }
+
+
+        @SubscribeEvent
+        public static void registerScreens(RegisterMenuScreensEvent event) {
+            event.register(ModMenuTypes.END_INFUSER_MENU.get(), EndInfuserScreen::new);
+        }
     }
 }

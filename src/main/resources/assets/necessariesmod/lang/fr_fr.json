@@ -12,6 +12,7 @@
   "item.necessariesmod.drill_engine": "Moteur de foreuse",
   "item.necessariesmod.drill_handle": "Poignée de foreuse",
   "item.necessariesmod.drill": "Foreuse",
+  "item.necessariesmod.suspicious_key": "Clé suspecte",
 
   "item.necessariesmod.dubious_food": "Nourriture douteuse",
   "item.necessariesmod.cherry": "Cerise",
@@ -67,9 +68,22 @@
   "item.minecraft.potion.effect.lightning": "Potion de foudre",
   "item.minecraft.splash_potion.effect.lightning": "Potion de foudre jetable",
   "item.minecraft.lingering_potion.effect.lightning": "Potion de foudre persistante",
+  "item.minecraft.tipped_arrow.effect.burning": "Flèche de brûlant",
+  "item.minecraft.tipped_arrow.effect.glowing": "Flèche de surbrillance",
+  "item.minecraft.tipped_arrow.effect.lightning": "Flèche de foudre",
+  "item.minecraft.potion.effect.haste": "Potion de Célérité",
+  "item.minecraft.splash_potion.effect.haste": "Potion de Célérité jetable",
+  "item.minecraft.lingering_potion.effect.haste": "Potion de Célérité persistante",
+  "item.minecraft.tipped_arrow.effect.haste": "Flèche de Célérité",
+
+
+  "block.necessariesmod.end_infuser": "Infuseur de l'End",
+  "item.necessariesmod.end_glass_shard": "Éclat de verre de l'End",
+  "item.necessariesmod.big_bottle": "Grande bouteille",
+  "item.necessariesmod.big_water_bottle": "Grande bouteille d'eau",
+  "item.necessariesmod.big_potion": "Grande potion",
 
   "item.necessariesmod.fish_sword": "Épée de poisson",
-
   "item.necessariesmod.cactus_helmet": "Casque de cactus",
   "item.necessariesmod.cactus_chestplate": "Plastron de cactus",
   "item.necessariesmod.cactus_leggings": "Jambières de cactus",
@@ -89,6 +103,8 @@
   "effect.necessariesmod.confusing": "Confus",
   "effect.necessariesmod.confusing.message": "Vous êtes confus !",
   "effect.necessariesmod.prickly": "Épineux",
+
+  "item.necessariesmod.suspicious_key.desc": "Vous ressentez une énergie étrange émanant de cette clé... Peut-être quelle appartient à quelqu'un ?",
 
   "creativetab.necessariesmod.food_tab": "Necessaries Mod Nourritures",
   "creativetab.necessariesmod.item_tab": "Necessaries Mod"

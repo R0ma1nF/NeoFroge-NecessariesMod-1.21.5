@@ -44,6 +44,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.DRILL_ENGINE);
                         output.accept(ModItems.DRILL_HANDLE);
                         output.accept(ModItems.DRILL);
+                        output.accept(ModItems.SUSPICIOUS_KEY);
+                        output.accept(ModBlocks.END_INFUSER);
+                        output.accept(ModItems.END_GLASS_SHARD);
+                        output.accept(ModItems.BIG_BOTTLE);
+                        output.accept(ModItems.BIG_POTION);
+                        output.accept(ModItems.BIG_WATER_BOTTLE);
                     }).build());
 
     public static final Supplier<CreativeModeTab> NECESSARIESMOD_FOODS = CREATIVE_MODE_TAB.register("necessariesmod_foods",
